@@ -1,2 +1,2 @@
 # guo-mantou.github.io
-My site.
+This is [my site](https://guo-mantou.github.io/)!
