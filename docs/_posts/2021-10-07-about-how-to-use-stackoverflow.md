@@ -2,7 +2,7 @@
 layout: post
 title:  "如何使用 stackoverflow"
 date:   2021-10-07 21:42:53 +0800
-categories: Linux
+categories: learn
 ---
 
 今年上半年，我注册了stackoverflow的账号。最初的目的是为了学习更多的CS知识和锻炼自己的英文表达能力。
