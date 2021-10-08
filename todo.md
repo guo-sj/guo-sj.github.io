@@ -1,7 +1,7 @@
 # TODO
 
 - 阅读文档
-    - SET UP SITE WITH JEKYLL
+    - [SET UP SITE WITH JEKYLL](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
         - ~~GitHub Pages & Jekyll~~
         - ~~Create site with Jekyll~~
         - ~~Test site locally with Jekyll~~
@@ -10,8 +10,9 @@
         - Add theme to Pages site
         - Jekyll build errors for Pages
         - Troubleshoot Jekyll errors
-    - CONFIGURE A CUSTOM DOMAIN
+    - [CONFIGURE A CUSTOM DOMAIN](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
         - Custom domains in GitHub Pages
         - Manage a custom domain
         - Troubleshoot a custom domain
+    - [Jekyll Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
 - 把自己my-blog的优质的博客移过来
