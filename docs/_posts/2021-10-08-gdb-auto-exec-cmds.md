@@ -1,4 +1,3 @@
-# GDB Automatic Execution of Commands
 ---
 layout: post
 title:  "gdb automatic execution of commands"
