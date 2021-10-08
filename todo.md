@@ -1,6 +1,5 @@
 # TODO
 
-- 把自己my-blog的优质的博客移过来
 - 阅读文档
     - SET UP SITE WITH JEKYLL
         - ~~GitHub Pages & Jekyll~~
@@ -15,3 +14,4 @@
         - Custom domains in GitHub Pages
         - Manage a custom domain
         - Troubleshoot a custom domain
+- 把自己my-blog的优质的博客移过来
