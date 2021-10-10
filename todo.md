@@ -14,5 +14,9 @@
         - Custom domains in GitHub Pages
         - Manage a custom domain
         - Troubleshoot a custom domain
-    - [Jekyll Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
+    - Jekyll
+        - GETTING STARTED
+            - [Jekyll Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
+        - CONTENT
+            - Posts   <- Display an index of posts
 - 把自己my-blog的优质的博客移过来
