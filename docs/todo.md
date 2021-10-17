@@ -9,9 +9,10 @@ permalink: /todo/
         - ~~GitHub Pages & Jekyll~~
         - ~~Create site with Jekyll~~
         - ~~Test site locally with Jekyll~~
-        - Add content to Pages site
-        - Set Markdown processor
-        - Add theme to Pages site
+        - ~~Add content to Pages site~~
+        - ~~Set Markdown processor~~
+        - ~~Add theme to Pages site~~
+            - [Jekyll/minima](https://github.com/jekyll/minima#change-default-date-format) <- 
         - Jekyll build errors for Pages
         - Troubleshoot Jekyll errors
     - [CONFIGURE A CUSTOM DOMAIN](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)

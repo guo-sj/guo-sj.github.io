@@ -20,17 +20,30 @@
 
 title: Guoshijie's Blog
 email: 515878133@qq.com
+
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Guoshijie's Blog!
   There are some thoughts, manuals and feelings of mine.
   Hope you enjoy them :-).
 baseurl: "" # the subpath of your site, e.g. /blog
+
 url: "https://guo-mantou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: -  I live in China where have no twitter!!
+
+markdown: GFM  # set markdown processor to Github Flavored Markdown (GFM)
+
 github_username:  guo-mantou
 
 # Build settings
 theme: minima
+
+# only link to *about* page
+header_pages:
+    - about.markdown
+    - todo.md
+
+minima:
+    skin: dark
+
 plugins:
   - jekyll-feed
 
