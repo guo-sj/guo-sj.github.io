@@ -1,4 +1,8 @@
-# TODO
+---
+layout: page
+title: TODO
+permalink: /todo/
+---
 
 - 阅读文档
     - [SET UP SITE WITH JEKYLL](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
@@ -19,4 +23,4 @@
             - [Jekyll Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
         - CONTENT
             - Posts   <- Display an index of posts
-- 把自己my-blog的优质的博客移过来
+- 把自己[my-blog](https://github.com/guo-mantou/my-blog)的优质的博客移过来
