@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "gdb automatic execution of commands"
+title:  "Gdb Automatic Execution of Commands"
 date:   2021-10-08 16:43:53 +0800
 categories: linux gdb
 ---

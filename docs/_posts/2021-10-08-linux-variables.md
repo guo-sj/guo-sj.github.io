@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "linux variables"
+title:  "Linux Variables"
 date:   2021-10-08 17:08:53 +0800
 categories: linux
 ---
