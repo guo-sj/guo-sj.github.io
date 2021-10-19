@@ -19,4 +19,4 @@ Here are some tmux commands used in my daily work, some of them may be my person
 | **^b space && enter**    | start select test && finish |
 | **^b p**    | paste buffer (**personal**) |
 
-And my personal [.tmux.conf](/assets/.tmux.conf) file.
+And my personal [.tmux.conf](/assets/tmux.conf) file.
