@@ -33,7 +33,7 @@ Finally, iterate to first step, then second step and go on. Read a little, write
 # Example 2 Ping Pong
 
 First step, read classic books - [乒乓球 直板反胶打法训练](https://book.douban.com/subject/3004601/), written by WuJingping, who is 
-one of the most famous chinese national coaches. This books could answer any questions about Ping Pong of mine.
+one of the most famous chinese national coaches. This book could answer any questions about Ping Pong of mine.
 
 Second step, do some practice. I give 10 minutes of my lunch time to practice Ping Pong everyday, and try to deploy points in the book during the process. I have to say that it's effective to level my skill up.
 
