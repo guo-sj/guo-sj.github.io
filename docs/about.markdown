@@ -8,7 +8,7 @@ permalink: /about/
 - [Programming with GNU Software](https://guo-mantou.github.io/about/Programming%20with%20GNU%20Software)
 - [The C Programming Language](https://guo-mantou.github.io/about/The%20C%20Programming%20Language)
 - [the UNIX Programming Environment](todo-the-link)
-- [The Computer System, A programmer's perspective](todo-the-link)
+- [The Computer System, A programmer's perspective](https://guo-mantou.github.io/about/csapp)
 - [高能效人士的七个习惯]
 
 ## The Books waiting to be read
