@@ -7,9 +7,9 @@ permalink: /read-books/
 ## The Books I am reading
 - [Programming with GNU Software](https://guo-sj.github.io/read-books/Programming%20with%20GNU%20Software)
 - [The C Programming Language](https://guo-sj.github.io/read-books/The%20C%20Programming%20Language)
-- [the UNIX Programming Environment](todo-the-link)
+- [the UNIX Programming Environment](https://guo-sj.github.io/read-books/The%20UNIX%20Programming%20Environment)
 - [The Computer System, A programmer's perspective](https://guo-sj.github.io/read-books/csapp)
-- [高能效人士的七个习惯]
+- [高能效人士的七个习惯](todo-link)
 
 ## The Books waiting to be read
 - The Practice of Programming
