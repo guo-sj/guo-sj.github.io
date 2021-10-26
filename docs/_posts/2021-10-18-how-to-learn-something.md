@@ -21,10 +21,10 @@ First step, read classic books. Currently, I'm reading [The C Programming Langua
 The former shows that nearly everything I am interested about **C**, and the latter gives me capability to delve into the world of **UNIX OS**.
 
 Second step, do some practice. Both of books provide exercises, and I try to give answers based on my understanding. 
-I manage them in [my github repository](https://github.com/guo-mantou/):
+I manage them in [my github repository](https://github.com/guo-sj/):
 
-- [The C Programming Language Exercises](https://github.com/guo-mantou/c-language-exercise)
-- [The UNIX Programming Environment Exercises](https://github.com/guo-mantou/The-UNIX-Programming-Environment)
+- [The C Programming Language Exercises](https://github.com/guo-sj/c-language-exercise)
+- [The UNIX Programming Environment Exercises](https://github.com/guo-sj/The-UNIX-Programming-Environment)
 
 Although doing exercises costs a lot of time and makes reading little slow, it is salutary and **do** improve my programming ability, and I recommand everyone who want to learn programming doing like that.
 

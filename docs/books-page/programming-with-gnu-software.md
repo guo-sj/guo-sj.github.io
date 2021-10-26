@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Programming with GNU Software
-permalink: /about/Programming with GNU Software
+permalink: /read-books/Programming with GNU Software
 ---
 
 - 6: Debugging C and C++ Programs 129

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The C Programming Language
-permalink: /about/The C Programming Language
+permalink: /read-books/The C Programming Language
 ---
 
 - ~~Preface..............................................................................6~~

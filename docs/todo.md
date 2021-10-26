@@ -24,4 +24,4 @@ permalink: /todo/
             - [Jekyll Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
         - CONTENT
             - Posts   <- Display an index of posts
-- 把自己[my-blog](https://github.com/guo-mantou/my-blog)的优质的博客移过来
+- 把自己[my-blog](https://github.com/guo-sj/my-blog)的优质的博客移过来

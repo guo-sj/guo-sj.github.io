@@ -1,14 +1,14 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Read Books
+permalink: /read-books/
 ---
 
 ## The Books I am reading
-- [Programming with GNU Software](https://guo-mantou.github.io/about/Programming%20with%20GNU%20Software)
-- [The C Programming Language](https://guo-mantou.github.io/about/The%20C%20Programming%20Language)
+- [Programming with GNU Software](https://guo-sj.github.io/read-books/Programming%20with%20GNU%20Software)
+- [The C Programming Language](https://guo-sj.github.io/read-books/The%20C%20Programming%20Language)
 - [the UNIX Programming Environment](todo-the-link)
-- [The Computer System, A programmer's perspective](https://guo-mantou.github.io/about/csapp)
+- [The Computer System, A programmer's perspective](https://guo-sj.github.io/read-books/csapp)
 - [高能效人士的七个习惯]
 
 ## The Books waiting to be read
@@ -34,17 +34,3 @@ permalink: /about/
 ## The Books I've read
 - UNIX: A History and a Memoir
 
-## About Jekyll
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll

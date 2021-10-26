@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computer System - A Programmer's perspective
-permalink: /about/csapp
+permalink: /read-books/csapp
 ---
 
 **TODO**: 制定一个阅读此书的计划
