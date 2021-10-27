@@ -132,4 +132,4 @@ Second, the process of learning Vim is fun. All of things you need to do are:
 With doing this loop again and again, you will eventually find that your editing
 becomes as fast as you think.
 
-Finally, my [.vimrc](/asset/vim/vimrc).
+Finally, my [.vimrc](/assets/vim/vimrc).
