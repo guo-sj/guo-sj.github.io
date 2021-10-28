@@ -25,3 +25,8 @@ permalink: /todo/
         - CONTENT
             - Posts   <- Display an index of posts
 - 把自己[my-blog](https://github.com/guo-sj/my-blog)的优质的博客移过来
+- 写一些博客
+    - 关于如何学习五笔
+    - 关于如何跑步
+    - 关于如何使用GDB调试，参照《Programming with GNU Software》
+    - 关于如何使用Vim进行重复性的工作，介绍macro，替换
