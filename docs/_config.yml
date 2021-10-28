@@ -25,6 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Guoshijie's Blog!
   There are some thoughts, manuals and feelings of mine.
   Hope you enjoy them :-).
+
+  Although english is not my native language, some of blogs are 
+  written in english. Maybe a lot of SYNTACTICAL ERRORS in them.
+  If someone notices any kind of error, please let me know by email, 
+  thanks.
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "https://guo-sj.github.io" # the base hostname & protocol for your site, e.g. http://example.com
