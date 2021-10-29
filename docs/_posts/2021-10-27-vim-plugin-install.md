@@ -113,15 +113,15 @@ cd ~/vimfiles/pack/vendor/start && git clone https://github.com/preservim/nerdtr
 ```
 
 ## Some advice
-If you concern, I would like to show some advice about vim and vim plugin:
+If your concern, I would like to show some advice about vim and vim plugin:
 
-First, Vim is awesome, almost everyone who know a bit of Vim will agree with
-that.  As far as I known, Vim (8.0 or higher verion) is strong enough to handle
-many kind of text based tasks of a few popular languages, like C, C++, Python, Markdown,
+First, Vim is awesome, almost everyone who knows a bit of Vim will agree with
+that.  As far as I have known, Vim (8.0 or higher version) is strong enough to handle
+many kinds of text based tasks of a few popular languages, like C, C++, Python, Markdown,
 etc. and that's why I recommend that **Don't be so hasty to install plugins, 
-only do it whenever you need**.
+only do that whenever you really need**.
 
-Second, the process of learning Vim is fun. All of things you need to do are:
+Second, the process of learning Vim is fun. All the things you need to do are:
 ```
     while (1)
         read some manual/articles/books of Vim
@@ -129,7 +129,7 @@ Second, the process of learning Vim is fun. All of things you need to do are:
     end while
 ```
 
-With doing this loop again and again, you will eventually find that your editing
-becomes as fast as you think.
+By doing this loop over again and over again, you will end up finding that your editing
+is getting as fast as you think.
 
 Finally, my [.vimrc](/assets/vim/vimrc).
