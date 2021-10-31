@@ -2,7 +2,7 @@
 layout: post
 title:  "Shared Object In Linux"
 date:   2021-10-07 21:24:53 +0800
-categories: Linux
+categories: linux
 ---
 
 ## 问题描述
