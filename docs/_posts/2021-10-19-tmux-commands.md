@@ -9,6 +9,7 @@ Here are some tmux commands used in my daily work, some of them may be my person
 
 | command     | action  |
 | :---:       | :---:     |
+| **tmux new-session -s Name**    | create a new session and name it |
 | **^b .**    | move windows |
 | **^b ,**    | rename window |
 | **^b c**    | create another window |
@@ -19,4 +20,4 @@ Here are some tmux commands used in my daily work, some of them may be my person
 | **^b space && enter**    | start select test && finish |
 | **^b p**    | paste buffer (**personal**) |
 
-And my personal [.tmux.conf](/assets/tmux.conf) file.
+And my personal [.tmux.conf](https://github.com/guo-sj/my-dot-file/blob/main/tmux/.tmux.conf) file.
