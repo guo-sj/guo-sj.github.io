@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Install oh-my-zsh"
+title: "Install Oh My Zsh"
 date:  2021-11-06 11:11:53 +0800
 categories: zsh
 ---
 
-[oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) 是一款非常好用zsh框架。
+[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) 是一款非常好用zsh框架。
 
 按照[ohmyzsh README](https://github.com/ohmyzsh/ohmyzsh#basic-installation)的安装方法
 总是遇到问题，于是自己总结了一套方法，在此记录下来。
