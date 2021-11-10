@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Change Github URL"
+title: "Change Git Remote URL"
 date:  2021-11-09 09:11:53 +0800
 categories: git
 ---
