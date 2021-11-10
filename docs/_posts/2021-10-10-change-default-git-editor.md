@@ -24,6 +24,7 @@ $ git config --global core.editor vim
 | sublime text | subl -n -w |
 | atom	  | atom --wait |
 | vscode  | code --wait |
+
 列表[来源](https://koenwoortman.com/git-change-default-editor/)
 
 当然，你也可以应用一下以前记录的[内容](https://guo-sj.github.io/git/2021/11/08/git-alias.html)，
