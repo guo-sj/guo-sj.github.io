@@ -13,7 +13,7 @@ categories: git
 $ git config --global core.editor vim
 ```
 
-可用的编辑器列表：
+可用的编辑器列表 **[1]**：
 
 | Editor  | Config value |
 | :---:   |  :---:       |
@@ -25,7 +25,6 @@ $ git config --global core.editor vim
 | atom	  | atom --wait |
 | vscode  | code --wait |
 
-列表[来源](https://koenwoortman.com/git-change-default-editor/)
 
 当然，你也可以应用一下以前记录的[内容](https://guo-sj.github.io/git/2021/11/08/git-alias.html)，
 用`cfg`来代替`config`，如：
@@ -36,5 +35,7 @@ $ git config --global alias.cfg config
 ```
 $ git cfg --global core.editor vim
 ```
+
+**[1]** 列表来自[Change the default git editor](https://koenwoortman.com/git-change-default-editor/)
 
 以上。
