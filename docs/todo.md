@@ -26,7 +26,6 @@ permalink: /todo/
             - Posts   <- Display an index of posts
 - 把自己[my-blog](https://github.com/guo-sj/my-blog)的优质的博客移过来
 - 写一些博客
-    - ~~关于我的大学同学，引用乔布斯1997年回归苹果的例子说明“起步晚不是问题，关键在于建立目标，然后一步一步的坚持”，鼓励自己~~
     - 更新[shared object in linux](https://guo-sj.github.io/linux/2021/10/07/shared-object-in-linux.html) 参照《Linux Programming Interface》
     - 关于如何阅读一本书 -- 从头到尾阅读
     - 关于如何学习五笔
