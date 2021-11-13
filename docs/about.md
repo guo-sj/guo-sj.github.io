@@ -4,14 +4,17 @@ title: About
 permalink: /about/
 ---
 
-My name is GuoShijie (郭世杰), and I'm a software engineer based in Nanjing, China.
+我是郭世杰，欢迎大家来到我的博客。
 
-During the day, I work as a junior software engineer for [FNST](https://www.fujitsu.com/cn/microsite/fnst/) where I'm involved in designing and delivering software projects.
+本着著名的UNIX设计原则**Once do one thing and do it well**，这里的每一篇博客都尽量做到`短小精悍`，
+即*一篇文章提供一个小问题的解决方案，几个小问题的解决方案组合起来构成一个大问题的解决方案*，像**搭积木**
+一样。
 
-Personal hobbies include coding, reading, learning and Ping Pong.
+至于我自己，南京航空航天大学信息安全专业本科，是一个生活在南京的软件工程师。
 
-You can find a bit about me elsewhere on the Internet here: [Github](https://github.com/guo-sj).
+我是一个`coder` & `lifelong learner`。
 
-And [my resume](todo-link).
+如果在读博客时有任何问题，欢迎通过[邮件](515878133@qq.com)来和我交流。:-)
 
+以上。
 

@@ -23,12 +23,6 @@ email: 515878133@qq.com
 
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Guoshijie's Blog!
-  There are a few thoughts, manuals and feelings from my own.
-
-  By the way, although I am not a native speaker of English, some blogs are 
-  written in English. Maybe a lot of SYNTACTICAL ERRORS in them.
-  If anybody notices any mistake, please let me know via email, 
-  thank you.
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: "https://guo-sj.github.io" # the base hostname & protocol for your site, e.g. http://example.com
