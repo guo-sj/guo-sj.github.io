@@ -9,6 +9,7 @@ permalink: /read-books/
 - [The C Programming Language](https://guo-sj.github.io/read-books/The%20C%20Programming%20Language)
 - [the UNIX Programming Environment](https://guo-sj.github.io/read-books/The%20UNIX%20Programming%20Environment)
 - [The Computer System, A programmer's perspective](https://guo-sj.github.io/read-books/csapp)
+- [The Linux Programming Interface](https://guo-sj.github.io/read-books/The%20Linux%20Programming%20Interface)
 - [高能效人士的七个习惯](todo-link)
 
 ## The Books waiting to be read
