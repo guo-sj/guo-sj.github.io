@@ -2,7 +2,7 @@
 layout: post
 title: Vim Plugin Install
 date: 2021-10-27 15:06:40 +0800
-categories: vim
+categories: Vim
 ---
 
 To install a vim plugin, you need just a `plugin manager` and the `plugins` you want to install.

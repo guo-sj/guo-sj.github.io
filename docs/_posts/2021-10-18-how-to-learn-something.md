@@ -2,7 +2,7 @@
 layout: post
 title: "How to Learn Something"
 date:  2021-10-18 23:43:43 +0800
-categories: learn
+categories: Learn
 ---
 
 For myself, the process of learning something is:

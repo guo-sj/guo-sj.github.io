@@ -2,7 +2,7 @@
 layout: post
 title: "Linux Library 2: Shared Object (.so)"
 date:  2021-11-01 20:11:53 +0800
-categories: linux
+categories: Linux
 ---
 
 Consider example files:

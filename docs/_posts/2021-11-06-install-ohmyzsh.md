@@ -2,7 +2,7 @@
 layout: post
 title: "Install Oh My Zsh"
 date:  2021-11-06 11:11:53 +0800
-categories: zsh
+categories: Zsh
 ---
 
 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) 是一款非常好用zsh框架。

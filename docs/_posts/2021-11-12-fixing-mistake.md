@@ -2,7 +2,7 @@
 layout: post
 title: "勇敢地犯错"
 date:  2021-11-12 09:11:53 +0800
-categories: thought
+categories: Thought
 ---
 
 我是一个怕犯错误的人。犯错误对我来说，似乎是一件不可饶恕的事情，一想到

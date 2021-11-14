@@ -2,7 +2,7 @@
 layout: post
 title: "Change Default Git Editor"
 date:  2021-11-10 10:11:53 +0800
-categories: git
+categories: Git
 ---
 
 在Ubuntu上初次安装`git`的时候，`git`的默认编辑器为`nano`，自己

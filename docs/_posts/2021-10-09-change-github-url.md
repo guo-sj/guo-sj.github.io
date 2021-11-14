@@ -2,7 +2,7 @@
 layout: post
 title: "Change Git Remote URL"
 date:  2021-11-09 09:11:53 +0800
-categories: git
+categories: Git
 ---
 
 最近换掉了[github](https://github.com/guo-sj)的账户名，本地的仓库需要

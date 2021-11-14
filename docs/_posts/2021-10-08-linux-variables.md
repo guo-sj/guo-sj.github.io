@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux Variables"
 date:   2021-10-08 17:08:53 +0800
-categories: linux
+categories: Linux
 ---
 
 ## 前言

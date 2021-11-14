@@ -2,7 +2,7 @@
 layout: post
 title: "Unset Alias In Oh My Zsh"
 date:  2021-11-10 16:11:53 +0800
-categories: zsh
+categories: Zsh
 ---
 
 自己最近一直在使用[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)。今天我发现

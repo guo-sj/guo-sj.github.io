@@ -2,7 +2,7 @@
 layout: post
 title: "《天道》中的对话"
 date: 2021-10-10 10:11:53 +0800
-categories: art
+categories: Art
 ---
 
 这个文档用于记录一些我认为有用的电视剧《天道》中的对话，并在后面追加一些自己的感悟。

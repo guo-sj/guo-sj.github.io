@@ -2,7 +2,7 @@
 layout: post
 title: "Handle tar.gz file"
 date:  2021-11-08 12:11:53 +0800
-categories: linux
+categories: Linux
 ---
 
 工作生活中时常会遇到`xxx.tar.gz`这样的文件，每次都是现查现用，这样不好，所以

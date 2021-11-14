@@ -2,7 +2,7 @@
 layout: post
 title: "What is Object Library?"
 date:  2021-11-13 10:11:53 +0800
-categories: linux
+categories: Linux
 ---
 
 什么是`object library`？

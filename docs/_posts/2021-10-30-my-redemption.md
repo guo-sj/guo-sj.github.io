@@ -2,7 +2,7 @@
 layout: post
 title: "我的得救之道 -- 和大学同学对比引发的自我讨论"
 date:  2021-10-30 8:09:53 +0800
-categories: thought
+categories: Thought
 ---
 
 今天上班无聊，想到昨天看到的[BDFL (Benevolent Dictator For Life)](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)

@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux Library 1: Static Libraries (.a)"
 date:   2021-11-01 20:00:53 +0800
-categories: linux
+categories: Linux
 ---
 
 Consider example files:
