@@ -35,5 +35,5 @@ permalink: /todo/
     - 关于如何使用Vim进行重复性的工作，介绍macro，替换
     - ~~更换[Vim Plugin Install](https://guo-sj.github.io/vim/2021/10/27/vim-plugin-install.html)和[Tmux Commands](https://guo-sj.github.io/tmux/2021/10/19/tmux-commands.html)的dotfile~~
     - 将[Vim Plugin Install](https://guo-sj.github.io/vim/2021/10/27/vim-plugin-install.html)换成中文
-- 按照`categories`列出自己的博客
+- ~~按照`categories`列出自己的博客 参考文章[3 Simple steps to setup Jekyll Categories and Tags](https://blog.webjeda.com/jekyll-categories/)~~
 - 为自己的博客加上搜索栏
