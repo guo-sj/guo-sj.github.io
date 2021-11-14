@@ -36,8 +36,8 @@ theme: minima
 
 # only link to *about* page
 header_pages:
-    - about.md
     - categories.html
+    - about.md
     - read-books.md
     - todo.md
 
