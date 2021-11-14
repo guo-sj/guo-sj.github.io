@@ -29,6 +29,7 @@ permalink: /todo/
     - 更新[shared object in linux](https://guo-sj.github.io/linux/2021/10/07/shared-object-in-linux.html) 参照《Linux Programming Interface》
     - 关于计时器的使用
     - 关于如何阅读一本书 -- 从头到尾阅读
+    - 关于为什么要查字典
     - 关于如何学习五笔
     - 关于如何跑步
     - 关于如何使用GDB调试，参照《Programming with GNU Software》
