@@ -5,7 +5,7 @@ date:  2021-10-19 17:28:53 +0800
 categories: tmux
 ---
 
-Here are some tmux commands used in my daily work, some of them may be my personal.
+ 这是一些我平时会用到的`tmux`命令。
 
 | command     | action  |
 | :---:       | :---:     |
