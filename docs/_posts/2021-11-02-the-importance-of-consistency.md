@@ -2,7 +2,7 @@
 layout: post
 title: "乒乓球： 连续的重要性"
 date:  2021-10-10 10:11:53 +0800
-categories: learn ping-pong
+categories: ping-pong
 ---
 
 打乒乓球，**连续性**很重要。

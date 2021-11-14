@@ -37,14 +37,17 @@ theme: minima
 # only link to *about* page
 header_pages:
     - about.md
-    - todo.md
+    - categories.html
     - read-books.md
+    - todo.md
 
 minima:
     skin: dark
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Gdb Automatic Execution of Commands"
 date:   2021-10-08 16:43:53 +0800
-categories: linux gdb
+categories: gdb
 ---
 
 GDB lets you attach command list to breakpoints and watchpoints, the syntax of a command list:

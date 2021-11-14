@@ -2,7 +2,7 @@
 layout: post
 title: "Change Default Shell In Ubuntu"
 date:  2021-11-06 10:00:00 +0800
-categories: linux ubuntu
+categories: linux
 ---
 
 Ubuntu系统的默认 log in shell 是bash，然而有时候，我们希望可以将它改成其他的shell，比如zsh。

@@ -2,7 +2,7 @@
 layout: post
 title: "ssh: Connection Refused"
 date:  2021-11-08 10:11:53 +0800
-categories: linux ssh
+categories: ssh
 ---
 
 用windows机器通过ssh （Secure Shell）连接Linux机器时，报错：
