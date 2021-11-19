@@ -9,7 +9,7 @@ categories: C
 
 函数指针的声明几乎和一般的函数声明一样，除了**声明中的函数名被一组括号包起
 来，并在函数名前插入一个 `*` （asterisk）**，就像这样：
-```
+```c
 int (*function_pointer)(int *, int *);
 ```
 
