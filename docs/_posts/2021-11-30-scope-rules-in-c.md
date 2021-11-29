@@ -5,8 +5,7 @@ date:  2021-11-30 14:11:53 +0800
 categories: C
 ---
 
-上一篇文章讲了[C语言中external variable和function](https://guo-sj.github.io/c/2021/11/30/external-variables-and-functions
--in-c)，
+上一篇文章讲了[C语言中external variable和function](https://guo-sj.github.io/c/2021/11/30/external-variables-and-functions-in-c)，
 这篇文章讲一下C语言中的`Scope Rules`。
 
 一个变量名或者函数名`Scope`是指**它可以被使用的那部分程序空间**[1]。
