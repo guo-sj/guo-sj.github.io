@@ -8,7 +8,7 @@ categories: C
 上一篇文章讲了[C语言中external variable和function](https://guo-sj.github.io/c/2021/11/30/external-variables-and-functions-in-c)，
 这篇文章讲一下C语言中的`Scope Rules`。
 
-一个变量名或者函数名`Scope`是指**它可以被使用的那部分程序空间**[1]。
+一个变量名或者函数名`scope`是指**它可以被使用的那部分程序空间[1]**。
 
 对于一个定义于函数开头的`internal variable`来说，它的`scope`就是它所在的函数。
 
@@ -32,7 +32,7 @@ void func2(int b)
 ```
 
 对于`external variable`或`function`而言，它的`scope`是从它声明（declaration）的那一行起，
-到所在文件的末尾[2]。如：
+到所在文件的末尾**[2]**。如：
 ```c
 main() { ... }
 
@@ -91,15 +91,15 @@ extern double val[];
 
 此外，在一个程序的源代码中，只能有一个`external variable`的定义，其他文件可以通过
 `extern`声明来对它进行访问。对于数组变量，数组大小必须在其定义的时候进行说明，声明
-的时候说或不说（像上面的val[]）都可以。
+的时候说或不说（像上面的val[ ]）都可以。
 
 `external variable`的初始化只能在**定义**的时候进行。
 
 以上。
 
-[1] 来自K&R的《The C Programming Language》，原句为“The scope of a name is the part
-of the program within which the name can be used.”
+[1] 来自K&R的《The C Programming Language》，原句为“**The scope of a name is the part
+of the program within which the name can be used.**”
 
-[2] 来自K&R的《The C Programming Language》，原句为“The scope of an external variable
+[2] 来自K&R的《The C Programming Language》，原句为“**The scope of an external variable
 or a function lasts from the point at which it is declared to the end of the file being
-compiled.”
+compiled.**”
