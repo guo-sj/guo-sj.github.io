@@ -32,7 +32,7 @@ void func2(int b)
 ```
 
 对于`external variable`或`function`而言，它的`scope`是从它声明（declaration）的那一行起，
-到所在文件的末尾**[2]**。如：
+到所在文件的末尾[2]。如：
 ```c
 main() { ... }
 
@@ -72,8 +72,8 @@ double pop(void) { ... }
 我们有必要在这里说明一下，一个`external variable`的**声明**（declaration）和
 **定义**（definition）的区别。
 
-声明（declaration）宣告了变量的属性，主要是这个变量的类型；而定义（definition）不仅
-宣告了变量的属性，同时还为它分配了存储空间。比如：
+**声明宣告了变量的属性，主要是这个变量的类型；而定义不仅
+宣告了变量的属性，同时还为它分配了存储空间**。比如：
 ```c
 int sp = 0;
 double val[MAXVAL];
