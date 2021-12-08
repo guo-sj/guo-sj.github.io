@@ -22,6 +22,10 @@ permalink: /todo/
         - useful tool for working with shared library
         - Shared Library versions and naming conventions
         - 41.7 ~ 41.14
+    - 关于计时器的使用
+    - 关于如何阅读一本书 -- 从头到尾阅读
+    - 为什么要读英文原版书
+    - 关于为什么要查字典
     - 关于如何学习五笔
     - 关于如何使用GDB调试，参照《Programming with GNU Software》
     - 关于如何使用Vim进行重复性的工作，介绍macro，替换
