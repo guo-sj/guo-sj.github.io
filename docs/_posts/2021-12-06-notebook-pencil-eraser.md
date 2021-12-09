@@ -40,8 +40,8 @@ categories: thought
 只要达到写出的东西让人能看清楚即可。**建议用一种均匀的速度把大脑中的东西输出成文字**，
 这样不仅可以产出清晰易读的文本，而且这个过程可以帮助大脑更好地思考（大量文字的“坏处” :-)）。
 
-最后，引用我从[jez's](https://jez.io/) talk 
-[writing at the command line](https://jez.io/talks/writing-at-the-command-line/)中
+最后，引用来自[jez's](https://jez.io/) talk 
+[writing at the command line](https://jez.io/talks/writing-at-the-command-line/)
 的一段话：
 
 > You are all computer scientists.
