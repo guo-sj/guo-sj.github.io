@@ -2,7 +2,7 @@
 layout: post
 title: "笔记本，铅笔，橡皮"
 date:  2021-12-06 10:11:53 +0800
-categories: thought
+categories: Thought
 ---
 
 最近，我发现自己解决问题主要依靠三样东西：`笔记本`，`铅笔`，`橡皮`。
