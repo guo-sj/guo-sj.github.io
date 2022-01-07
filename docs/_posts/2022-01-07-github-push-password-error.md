@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Github: Support for password authentication was removed ...
-date:  2021-1-7 10:11:53 +0800
+title: "Github: Support for password authentication was removed ..."
+date:  2022-1-7 10:11:53 +0800
 categories: Git
 ---
 
@@ -29,12 +29,12 @@ personal access token。
 虽然这样可以push上去，但是每次都要对token进行复制粘贴，操作频繁的时候
 非常不方便。**git提供了一个保存用户名&密码的功能**，通过下列命令配置：
 ```
-	$ git config --global credential.helper store
+$ git config --global credential.helper store
 ```
 然后再输入自己的username & token进行push一次，git就会记住这些信息，
 下一次，再进行push操作的时候，仅仅输入：
 ```
-	$ git push
+$ git push
 ```
 即可。
 
