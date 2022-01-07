@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Github: Support for password authentication was removed ..."
-<<<<<<< HEAD
 date:  2022-1-7 10:11:53 +0800
-=======
-date:  2021-1-7 10:11:53 +0800
->>>>>>> 99ca691d8b3f604c52eb93d813ace593983cd346
 categories: Git
 ---
 
