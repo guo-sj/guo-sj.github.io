@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "getchar() in c"
+title: "getchar() in C"
 date:  2021-12-27 10:11:53 +0800
 categories: C
 ---
@@ -33,7 +33,7 @@ int main()
 `EOF`的时候，缓冲区中没有数据，所以`getchar`会返回一个`EOF`，程序退出。
 
 补充，实验表明，当`getchar`接收到`回车`的时候，也会将读取到的信息（**含有收到的回车**）一并返回，
-因此，当我们输入：
+因此：
 ```
 	123(Enter)    # 用户输入
 	123(Enter)    # 程序输出
