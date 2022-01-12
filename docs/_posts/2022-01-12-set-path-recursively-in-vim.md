@@ -16,7 +16,7 @@ categories: Vim
 
 最近学到的一种方法可以解决这个问题：
 ```
-: set path+=./**    " 增加当前目录下所有sub-folders
+: set path+=**    " 增加当前目录下所有sub-folders
 ```
 上述命令告诉Vim增加当前目录下所有sub-folders到`path`，
 这样我们就能愉快地用`find`检索文件啦。
