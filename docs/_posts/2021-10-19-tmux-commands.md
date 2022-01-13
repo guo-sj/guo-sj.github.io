@@ -10,6 +10,7 @@ categories: Tmux
 | command     | action  |
 | :---:       | :---:     |
 | **tmux new-session -s Name**    | create a new session and name it |
+| **^b $**    | change the name of current session |
 | **^b .**    | move windows |
 | **^b ,**    | rename window |
 | **^b c**    | create another window |
