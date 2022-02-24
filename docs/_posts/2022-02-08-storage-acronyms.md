@@ -62,3 +62,9 @@ MQTT:  Message Queuing Telemetry Transport, is a lightweight, publish-subscribe
 network protocol that transports messages between devices.
 
 FUSE:  Filesystem in USEr space
+
+ext2:  second extended file system
+
+ext3:  third extended file system
+
+ext4:  fourth extended file system
