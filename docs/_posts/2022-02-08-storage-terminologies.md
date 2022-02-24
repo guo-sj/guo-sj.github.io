@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "存储名词"
+title: "存储术语"
 date:  2022-02-08 10:11:53 +0800
 categories: Storage
 ---
@@ -21,6 +21,10 @@ AWS IAM: Identity Access Management
 
 AWS ARN:  Amazon Resource Name
 
+AWS EC2:  Elastic Compute Cloud
+
+AWS VPCs:  Virtual Private Cloud
+
 GFS:  Global File System
 
 Apache Hadoop:  a collection of open-source software utilities that
@@ -30,3 +34,31 @@ Apache Hadoop:  a collection of open-source software utilities that
 
 PHP:  a general-purpose scripting language geared towards web development.
 一种网络开发的脚本语言。
+
+Saas:  Software as a Service
+
+ISVs:  Independent Software Vendors
+
+JSON:  JavaScript Object Notation
+
+JWT:  JSON Web Token
+
+gRPC:  Google Remote Procedure Call
+
+RESTful: REpresentational State Transfer, is a web standards based architecture and
+uses HTTP Protocol.
+
+ACLs:  Access Control Lists
+
+NFTs:  non-fungible tokens
+
+TLS:  Transport Layer Security
+
+TTL:  time to live
+
+JVM:  Java Virtual Machine
+
+MQTT:  Message Queuing Telemetry Transport, is a lightweight, publish-subscribe 
+network protocol that transports messages between devices.
+
+FUSE:  Filesystem in USEr space
