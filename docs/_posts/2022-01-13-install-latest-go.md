@@ -12,12 +12,12 @@ categories: Go
 
 首先从网址上下载二进制压缩文件：
 ```
-$ wget https://go.dev/dl/go1.17.6.linux-amd64.tar.gz
+$ wget https://golang.google.cn/dl/go1.17.7.linux-amd64.tar.gz
 ```
 
 然后利用`tar`来解压文件到目录`/usr/local`：
 ```
-$ sudo tar -xzf go1.17.6.linux-amd64.tar.gz -C /usr/local
+$ sudo tar -xzf go1.17.7.linux-amd64.tar.gz -C /usr/local
 ```
 
 更新环境变量`PATH`，把下面的内容加入你的shell配置文件，
@@ -40,7 +40,7 @@ $ which go
 最后，查看go的版本信息：
 ```
 $ go verison
-go version go1.17.6 linux/amd64
+go version go1.17.7 linux/amd64
 ```
 
 以上。
