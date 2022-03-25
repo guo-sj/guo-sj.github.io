@@ -68,3 +68,18 @@ ext2:  second extended file system
 ext3:  third extended file system
 
 ext4:  fourth extended file system
+
+RPM:  RedHat Package Manager
+
+DEB:  Debian Package
+
+YUM:  Yellowdog Updater Modified
+
+DNF:  Dandified yum
+
+ELF:  Executable and Linkable Format
+
+SCLs:  Software Collections, is created to provide RHEL/CentOS users with a means to easily and safely install and use multiple (and potentially more recent) versions of applications and run-time environments without messing up the existing system.
+
+MIME type: Multipurpose Internet Mail Extensions, which indicates the
+ nature and format of a document.
