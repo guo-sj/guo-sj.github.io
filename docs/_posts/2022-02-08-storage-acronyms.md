@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "存储术语"
+title: "Storage Acronyms"
 date:  2022-02-08 10:11:53 +0800
 categories: Storage
 ---
@@ -83,3 +83,5 @@ SCLs:  Software Collections, is created to provide RHEL/CentOS users with a mean
 
 MIME type: Multipurpose Internet Mail Extensions, which indicates the
  nature and format of a document.
+
+CQL: Cassandra Query Language
