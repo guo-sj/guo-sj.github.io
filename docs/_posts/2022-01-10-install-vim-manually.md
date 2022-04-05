@@ -13,7 +13,10 @@ categories: Vim
 ```
 $ git clone https://github.com/vim/vim
 
-$ cd vim/src
+$ cd vim
+
+# compile vim with Python3 support
+$ ./configure --enable-python3interp --with-python3-command=`which python3`
 
 $ make && make install
 ```
