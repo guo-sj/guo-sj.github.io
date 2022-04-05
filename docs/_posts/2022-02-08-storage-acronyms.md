@@ -85,3 +85,5 @@ MIME type: Multipurpose Internet Mail Extensions, which indicates the
  nature and format of a document.
 
 CQL: Cassandra Query Language
+
+LDAP:  Lightweight Directory Access Protocol
