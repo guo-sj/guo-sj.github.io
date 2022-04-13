@@ -87,3 +87,6 @@ MIME type: Multipurpose Internet Mail Extensions, which indicates the
 CQL: Cassandra Query Language
 
 LDAP:  Lightweight Directory Access Protocol
+
+CTF:  Capture The Flag, a style of hacking event where you have one goal:
+ hack in and find the flag
