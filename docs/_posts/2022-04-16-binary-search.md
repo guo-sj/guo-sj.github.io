@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "O(Logn) Algorithms - Binary Search"
+title: "O(Logn) Algorithm - Binary Search"
 date:  2022-04-16 10:11:53 +0800
 categories: Algorithm
 ---
