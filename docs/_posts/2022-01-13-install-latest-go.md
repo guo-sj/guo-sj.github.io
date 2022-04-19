@@ -43,4 +43,7 @@ $ go verison
 go version go1.17.7 linux/amd64
 ```
 
+补充一下，如果需要更新当前机器上的golang，只要把`/usr/local/go`删掉，
+然后再按照上述的步骤安装即可。
+
 以上。
