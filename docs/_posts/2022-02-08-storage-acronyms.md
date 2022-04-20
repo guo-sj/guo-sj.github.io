@@ -90,3 +90,5 @@ LDAP:  Lightweight Directory Access Protocol
 
 CTF:  Capture The Flag, a style of hacking event where you have one goal:
  hack in and find the flag
+
+KVM:  Kernel-based Virtual Machine
