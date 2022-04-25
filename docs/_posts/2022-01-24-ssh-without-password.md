@@ -35,4 +35,19 @@ username@server_ip:~$
 
 成功。
 
+以上是Linux/MacOS平台的做法，下面补充一下Windows平台的。步骤都是一样的，
+只是命令略有不同。
+
+首先生成SSH Key：
+```
+$ ssh-keygen
+```
+
+然后，拷贝SSH Key到目标服务器：
+```
+$ type $env:USERPROFILE\.ssh\id_rsa.pub | ssh username@server_ip "cat >> .ssh/authorized_keys"
+```
+
+成功。
+
 以上。
