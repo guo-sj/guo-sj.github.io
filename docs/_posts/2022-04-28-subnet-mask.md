@@ -68,7 +68,7 @@ network number | host number
 ```
 network number  host number
      |          |
-     v          V
+     V          V
 0 0 0 0 0 0 | 0 0
 ```
 
