@@ -25,7 +25,7 @@ gtk initialization failed
 ```
 
 答：
-我用MobaXterm为客户安装的时候出现过这个问题，解决方法详见[这篇文章](https://guo-sj.github.io/2022/04/28/mobaxterm-linux-gui.html)
+我用MobaXterm为客户安装的时候出现过这个问题，解决方法详见[这篇文章](https://guo-sj.github.io/kvm/2022/04/28/mobaxterm-linux-gui.html)
 
 **2.** VM可以拷贝的，但是有时在不同场景下，容量需要进行调整，这该怎么做呢？
 
