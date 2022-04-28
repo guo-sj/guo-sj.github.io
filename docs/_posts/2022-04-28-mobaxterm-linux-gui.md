@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "MobaXterm连接显示Linux图形化界面"
