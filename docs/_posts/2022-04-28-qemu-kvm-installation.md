@@ -160,6 +160,6 @@ $ systemctl restart network
 $ ping 30.30.30.201
 ```
 
-如果对上述安装过程有什么问题，可以参见[KVM FAQ]()。
+如果对上述安装过程有什么问题，可以参见[KVM FAQ](https://guo-sj.github.io/kvm/2022/04/28/qemu-kvm-installation-faq.html)。
 
 以上。
