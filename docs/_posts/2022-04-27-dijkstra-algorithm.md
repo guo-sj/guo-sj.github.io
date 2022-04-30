@@ -9,10 +9,11 @@ categories: Algorithm
 介绍了广度优先搜索，一种可以对有向无权图搜索节点的图算法。今天我们来介绍一种
 对有向有权图的求最短路径的算法 -- Dijkstra's Algorithm。
 
-[Grokking Algorithms](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230?msclkid=19bbc53cbfea11ecab8c4725c6dfa8ed)书中说Dijkstra's Algorithm 只适用于有向无回路图（DAG: Directed Acyclic Graph），
-但是实际上，书中最后给出的算法描述，是可以解决回路问题的，因此，严格来说，
-Dijkstra's Algorithm可以求解有向有权图（Directed Weighted Graph）的最短路径。
-哦对了，还有一点要注意，这个算法并不适用于含有负数权的图，至于原因我下面会详细说明。
+[书中](https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious/dp/1617292230?msclkid=19bbc53cbfea11ecab8c4725c6dfa8ed)说Dijkstra's Algorithm 只适用于有向无回路图（DAG: Directed Acyclic Graph），对于图中
+有回路的图和带负权的图是不适用的。注意，这里说的“不适用”是指，在这两种图中，Dijkstra's 
+Algorithm求得的路径有可能不是最短路径。但是依我目前的理解，我觉得有回路的图
+Dijkstra's Algorithm是可以处理的，而带负权图确实存在Dijkstra's Algorithm不能处理的
+情况，[这篇文章](https://guo-sj.github.io/algorithm/2022/04/30/dijkstra-algorithm-and-cyclic-graph-and-negative-weight-graph.html)在本文的基础上介绍了我这样说的原因，有兴趣的小伙伴可以了解一下，这里就不多说了。
 
 好，话不多说，我们先来看算法描述，假设我们想求一个图中节点A到节点B的最短路径，那么：
 ```
