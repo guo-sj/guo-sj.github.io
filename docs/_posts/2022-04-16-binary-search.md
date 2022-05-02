@@ -20,21 +20,21 @@ categories: Algorithm
 
 go语言实现：
 ```go
-func binarySearch(list []int, target int) int {
-    low, high := 0, len(list)-1
-    if low > high {
-        return -1
-    }
+func binarySearch(list []int, target int, offset int) int {
+	low, high := 0, len(list)-1
+	if low > high {
+		return -1
+	}
 
-    mid := (low + high) / 2
-    if list[mid] == target {
-        return mid
-    }
-    if list[mid] > target {
-        return binarySearch(list[:mid], target)
-    } else {
-        return binarySearch(list[mid+1:], target)
-    }
+	mid := (low + high) / 2
+	if list[mid] == target {
+		return mid + offset
+	}
+	if list[mid] > target {
+		return binarySearch(list[:mid], target, 0)
+	} else {
+		return binarySearch(list[mid+1:], target, offset+mid+1)
+	}
 }
 ```
 
