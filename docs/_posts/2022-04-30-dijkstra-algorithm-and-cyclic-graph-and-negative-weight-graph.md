@@ -53,6 +53,7 @@ categories: Algorithm
 最短路径BOOK -> POSTER -> PRUMS，花销为35。
 
 所以看到了，对于负权图Dijkstra's Algorithm得到了一个明显错误的结果，因此Dijkstra's Algorithm
-并不适用于负权图。
+并不适用于负权图。事实上，对于负权图的最短路径问题有一个专门的算法来进行求解 -- Bellman-Ford 
+Algorithm。感兴趣的同学可以了解一下，这里就不做介绍了。
 
 以上。
