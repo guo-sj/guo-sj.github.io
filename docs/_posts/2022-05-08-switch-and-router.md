@@ -96,7 +96,7 @@ DHCP的客户端，路由器这边运行着DHCP的服务器端，客户端可以
 外，我们还需要一个WAN（Wide Area Network）的IP，也就是公有IP（Public IP）。这个IP是由ISP来提供的。
 比如你想访问Google，你发出的IP Packet会先到本地的路由器，路由器把IP Packet的源IP地址换成ISP提供的
 公网IP，然后再转发出去。再收到回复后，再把目的IP地址换成私有IP，再转发给你，你就能看到Google的
-页面啦。
+页面啦。这种替换IP地址的机制被称为NAT（Network Address Translation）。
 
 顺便说一句，现在的路由器长这个样子：
 
