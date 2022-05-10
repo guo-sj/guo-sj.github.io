@@ -54,11 +54,11 @@ $ systemctl status libvirtd
 Host机器的eth3网卡连通，再为VM创建一个虚拟网卡tap0，把tap0和br0
 连通，这样的话就可以让VM和Host以桥接的方式连接起来。具体操作如下：
 ```
-$ brctl addbr br0                      # 创建虚拟网桥br0
+$ virsh iface-bridge eth1 br1          # 将物理网卡eth1与br1连通，创建网桥配置文件ifcfg-br1，并启动网桥br1
+$ ifconfig br1                         # 此时显示br1的IP地址 
+$ ifdown eth1 && ifup eth1 && ifconfig eth1 #重启eth1网卡并查看eth1的信息，因为eth1已经与br1连通，br1已经有IP地址了，所以此时应该不显示IP地址
 $ tunctl -t tap0 -u root               # 创建虚拟网卡tap0
 $ brctl addif br0 tap0                 # 将创建的br0和tap0连通
-$ ip link set dev eth3 master br0      # 将物理网卡与br0连通，并且能够通信
-$ ifconfig br0 [eth3的IP/掩码] up      # 给br0配置IP，填上eth3的IP和掩码
 $ ifconfig tap0 up                     # 让虚拟网卡tap0启动
 ```
 
@@ -70,10 +70,12 @@ $ brctl addif br0 tap1
 $ ifconfig tap1 up
 ```
 
-如果网桥不需要了，可以通过下列命令删除网桥：
+如果网桥或网卡不需要了，可以通过下列命令删除：
 ```
 $ ip link set dev br0 down             # 让网桥br0停止运行
 $ brctl delbr br0                      # 删除网桥br0
+$ brctl delif br0 tap0                 # 把tap0从网桥br0中删除
+$ tunctl -d tap0                       # 删除tap0
 ```
 
 网络配置好了之后，接下来我们来安装VM。
@@ -119,7 +121,12 @@ $ sudo chmod 640 /etc/qemu/${USER}.conf
 
 虚拟机安装完成之后，把窗口关掉，为虚拟机设定mac地址：
 ```
-$ qemu-kvm -m 20480 -drive file=/opt/kvm/vm1.qcow2 -net nic,macaddr=52:54:00:12:34:00 -net tap,ifname=tap0,script=no,downscript=no -daemonize
+$ qemu-kvm -m 2048 -drive file=/opt/kvm/vm1.qcow2 -nic,ifname=tap0,script=no,downscript=no,mac=52:54:00:12:34:00 -daemonize
+```
+
+如果需要给虚拟机配置两个网卡tap0和tap1，那么在上述启动命令中再加一个`-nic`的参数即可，如：
+```
+$ qemu-kvm -m 2048 -drive file=/opt/kvm/vm1.qcow2 -nic,ifname=tap0,script=no,downscript=no,mac=52:54:00:12:34:00 -nic,ifname=tap1,script=no,downscript=no,mac=52:54:00:12:34:01 -daemonize
 ```
 
 启动之后，用root用户登录，编辑/etc/sysconfig/network-scripts/ifcfg-ens3：
