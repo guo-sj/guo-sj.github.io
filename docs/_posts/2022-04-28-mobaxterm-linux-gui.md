@@ -35,7 +35,7 @@ X11Forwarding yes 				#将X11Forwarding去掉注释改为yes
 $ systemctl restart sshd
 ```
 
-**4.** 修改完成之后，我们需要新建session并勾选X11-Forwarding
+**4.** 修改完成之后，我们需要新建session并勾选X11-Forwarding，步骤为：
 输入ip —> 勾选Specify username —> 输入用户名 —> 勾选X11-Forwarding。
 
 ![](/assets/mobaxterm-x11-configuration-1.png)
