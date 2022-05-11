@@ -13,6 +13,7 @@ X Windows Server。
 图如下：
 
 ![](/assets/x11.png)
+
 注：这个图片转载自[通过SSH进行X11转发](https://z-rui.github.io/post/2015/10/x11forward/)。
 
 因为ssh服务要转发X11的数据，所以要编辑ssh服务的配置文件，在CentOS7中，这个文件是`/etc/ssh/sshd_config`：
