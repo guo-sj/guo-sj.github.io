@@ -5,7 +5,7 @@ date:  2022-04-28 11:08:53 +0800
 categories: KVM
 ---
 
-> 这篇文章转载自[MobaXterm连接显示Linux图形化界面](https://blog.csdn.net/ly7472712/article/details/116993554?msclkid=9e8a500fc53f11ec9ec2bbb87ad05660)，出于方便考虑，fork一份到自己这边。
+> 这篇文章在[MobaXterm连接显示Linux图形化界面](https://blog.csdn.net/ly7472712/article/details/116993554?msclkid=9e8a500fc53f11ec9ec2bbb87ad05660)的基础了加入了自己的一些思考。
 
 **1.** Linux操作系统中安装X11相关安装包
 
@@ -24,18 +24,18 @@ xorg-x11-fonts-Type1 xclock
 #GatewayPorts no
 X11Forwarding yes 				#将X11Forwarding去掉注释改为yes
 #X11DisplayOffset 10
-X11UseLocalhost no				#将X11UseLocalhost去掉注释改为no
+#X11UseLocalhost no
 #PermitTTY yes
 #PrintMotd yes
 ...
 ```
 
-**3.** 重启ssh服务
+**3.** 当我们修改完配置ssh的配置文件之后，需要重启ssh服务
 ```
 $ systemctl restart sshd
 ```
 
-**4.** 新建session勾选X11-Forwarding
+**4.** 修改完成之后，我们需要新建session并勾选X11-Forwarding
 输入ip —> 勾选Specify username —> 输入用户名 —> 勾选X11-Forwarding。
 
 ![](/assets/mobaxterm-x11-configuration-1.png)
@@ -45,5 +45,3 @@ $ systemctl restart sshd
 ![](/assets/mobaxterm-x11-configuration-2.png)
 
 以上。
-
-
