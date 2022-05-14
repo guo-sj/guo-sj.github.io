@@ -37,7 +37,7 @@ categories: Algorithm
 ```
 
 在说完了算法，我们再来看Go语言的实现：
-```
+```go
 func quickSort(list []int) {
     if len(list) < 2 {
         return
