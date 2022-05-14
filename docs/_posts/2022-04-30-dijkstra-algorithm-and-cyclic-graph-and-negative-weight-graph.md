@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dijkstra's Algorithm -- Cyclic Graph and Negative Weighted Graph"
+title: "Dijkstra's Algorithm - Cyclic Graph and Negative Weighted Graph"
 date:  2022-04-30 10:11:53 +0800
 categories: Algorithm
 ---
