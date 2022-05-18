@@ -33,4 +33,26 @@ else
 fi
 ```
 
+3. 判断一个命令是否执行正确：
+```sh
+#!/bin/bash
+
+if command; then
+    echo "succeed"
+else
+    echo "fail"
+fi
+```
+或者可以这样：
+```sh
+#!/bin/bash
+
+command
+if [ $? -eq 0 ]; then
+    echo "succeed"
+else
+    echo "fail"
+fi
+```
+
 以上。
