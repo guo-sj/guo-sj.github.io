@@ -121,12 +121,12 @@ $ sudo chmod 640 /etc/qemu/${USER}.conf
 
 虚拟机安装完成之后，把窗口关掉，为虚拟机设定mac地址：
 ```
-$ qemu-kvm -m 2048 -drive file=/opt/kvm/vm1.qcow2 -nic,ifname=tap0,script=no,downscript=no,mac=52:54:00:12:34:00 -daemonize
+$ qemu-kvm -name vm1 -smp cpus=8 -m 8192 -drive file=/opt/kvm/vm1.qcow2 -nic,ifname=tap0,script=no,downscript=no,mac=52:54:00:12:34:00 -daemonize
 ```
 
 如果需要给虚拟机配置两个网卡tap0和tap1，那么在上述启动命令中再加一个`-nic`的参数即可，如：
 ```
-$ qemu-kvm -m 2048 -drive file=/opt/kvm/vm1.qcow2 -nic,ifname=tap0,script=no,downscript=no,mac=52:54:00:12:34:00 -nic,ifname=tap1,script=no,downscript=no,mac=52:54:00:12:34:01 -daemonize
+$ qemu-kvm -name vm1 -smp cpus=8 -m 8192 -drive file=/opt/kvm/vm1.qcow2 -nic,ifname=tap0,script=no,downscript=no,mac=52:54:00:12:34:00 -nic,ifname=tap1,script=no,downscript=no,mac=52:54:00:12:34:01 -daemonize
 ```
 
 启动之后，用root用户登录，编辑/etc/sysconfig/network-scripts/ifcfg-ens3：
