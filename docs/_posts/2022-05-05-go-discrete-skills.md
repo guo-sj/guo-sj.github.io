@@ -48,4 +48,21 @@ m = map[string]int{ ... }  // keys is requried
 m = make(map[string]int) // make
 ```
 
+4. 得益于slice，用golang实现栈或者对列非常简单。我们先来看栈的实现：
+```go
+stack := []string{}
+
+stack = append(stack, "elem")  // push one element to stack
+top := stack[len(stack)-1]  // get the top element of stack
+stack = stack[:len(stack)-1] // pop one element from stack
+```
+再来看对列的实现：
+```go
+queue := []string{}
+
+queue = append(queue, "elem") // push one element to queue
+top := queue[0] // get the top element of queue
+queue = queue[1:] // pop one element from queue
+```
+
 以上。
