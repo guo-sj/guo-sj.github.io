@@ -65,4 +65,51 @@ top := queue[0] // get the top element of queue
 queue = queue[1:] // pop one element from queue
 ```
 
+5. 在golang中，一个类型的变量是可以调用对应类型的方法（Method）的。如下面的代码：
+```go
+package main
+import "fmt"
+
+type myInt int
+
+func main() {
+    var i, j myInt
+    i.changeValue(3)
+    j.changeNothing(5)
+    fmt.Println(i, j) // i: 3 j: 0
+}
+
+func (mi *myInt) changeValue(val myInt) {
+    *mi = val
+}
+
+func (mi myInt) changeNothing(val myInt) {
+    mi = val
+}
+
+```
+
+6. 在golang中for循环的第二个参数是值传递的方式，不能用于修改原变量的值。如果
+想要修改原变量的值，可以用for的第一个参数，对原数据进行下标访问。如：
+```go
+var a []int{1, 2, 3}
+for _, item := range a {
+    item += 1
+}
+fmt.Println(a) // a: 1, 2, 3 数据没有发生变化
+
+for i := range a {
+    a[i] += 1
+}
+fmt.Println(a) // a: 2, 3, 4 数据发生变化
+```
+
+7. 为结构体fields加上两种格式tag的方法如下：
+```go
+type Person struct {
+    Name string `xml:"Name,omitempty" json:"Name,omitempty"`
+    Age  int `xml:",omitempty" json:",omitempty"`
+}
+```
+
 以上。
