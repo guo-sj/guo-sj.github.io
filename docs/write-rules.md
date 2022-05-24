@@ -14,3 +14,4 @@ permalink: /write-rules/
 另外，这里提醒自己，在`front matter`中的`categories`的名称应该**首字母大写**，如`Linux`，而不是`linux`，
 这样可以提升[categories page](https://guo-sj.github.io/categories/)的显示效果。
 
+当中英文交错在一块儿时，两者应该用空格隔开，如：`grpc 机制`而不是`grpc机制`。
