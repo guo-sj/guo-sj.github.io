@@ -43,7 +43,18 @@ else
     echo "fail"
 fi
 ```
-或者可以这样：
+assertion形式：
+```sh
+#!/bin/bash
+
+if ! command; then
+    echo "fail"
+else
+    echo "succeed"
+fi
+```
+
+当然，我们也可以使用`$?`进行判断，像这样：
 ```sh
 #!/bin/bash
 
@@ -54,5 +65,18 @@ else
     echo "fail"
 fi
 ```
+
+4. 用一个例子来介绍，Shell中的`for`循环语法：
+```sh
+#!/bin/bash
+
+people="Tom Mary Eric"
+for person in $people
+do
+    echo $person
+done
+```
+值得注意的是，这里的 person 是 people 中元素的一个拷贝，不能用于修改
+people中元素的值。
 
 以上。
