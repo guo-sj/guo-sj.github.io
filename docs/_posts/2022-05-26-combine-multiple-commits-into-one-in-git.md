@@ -56,4 +56,13 @@ squash e5sdaf9 [programming] rm dir
 $ git push --force origin <branch-name>
 ```
 
+**=========================补充=========================**
+
+如果想要 revert rebase 操作，那么可以用命令 `git reflog` 查看你想回退的点，然后用命令：
+```
+$ git reset --hard HEAD@{x}  # x为你想回退的点
+```
+进行回退。
+
+
 以上。
