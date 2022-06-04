@@ -112,4 +112,17 @@ type Person struct {
 }
 ```
 
+8. `\r` escape characters 可以将输出位置移到当前所在行的开头，下面是它的一个例子，我们
+可以用它来实现一个 spinner：
+```go
+func spinner(delay time.Duration) {
+    for {
+        for _, r := range `_\|/` {
+            fmt.Printf("\r%c", r)
+            time.Sleep(delay)
+        }
+    }
+}
+```
+
 以上。
