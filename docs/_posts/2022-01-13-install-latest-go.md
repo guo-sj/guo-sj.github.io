@@ -12,7 +12,7 @@ categories: Go
 
 首先从网址上下载二进制压缩文件：
 ```
-$ wget https://golang.google.cn/dl/go1.17.7.linux-amd64.tar.gz
+$ wget https://golang.google.cn/dl/go1.17.7.linux-amd64.tar.gz  # 将 1.17.7 换成最新的 golang 版本
 ```
 
 然后利用`tar`来解压文件到目录`/usr/local`：
@@ -25,8 +25,10 @@ $ sudo tar -xzf go1.17.7.linux-amd64.tar.gz -C /usr/local
 ```
 # vim ~/.zshrc
 
-# add path of go
-export PATH=$PATH:/usr/local/go/bin
+# add paths of go
+export GOROOT="/usr/local/go"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 
 重新加载shell配置文件，并用`which`程序检查：
@@ -43,7 +45,12 @@ $ go verison
 go version go1.17.7 linux/amd64
 ```
 
-补充一下，如果需要更新当前机器上的golang，只要把`/usr/local/go`删掉，
+补充一下，如果需要更新当前机器上的 golang，只要把`/usr/local/go`删掉，
 然后再按照上述的步骤安装即可。
+
+当 golang 安装完成之后，还可以通过如下指令安装 golang 调试器 delve：
+```
+$ go install github.com/go-delve/delve/cmd/dlv@latest
+```
 
 以上。
