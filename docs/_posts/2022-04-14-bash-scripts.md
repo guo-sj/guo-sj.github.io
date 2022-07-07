@@ -88,4 +88,21 @@ $ ssh host@ipaddr [command]
 $ ssh tom@192.168.3.45 kill -9 9985
 ```
 
+6. Bash 中的数组用法。
+```sh
+# define an array
+elems=(
+    "1"
+    "2"
+    "3"
+    "4"
+)
+
+# iterate this array
+for elem in "${elems[@]}"
+do
+    echo $elem
+done
+```
+
 以上。
