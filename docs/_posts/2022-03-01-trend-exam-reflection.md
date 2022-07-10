@@ -2,7 +2,7 @@
 layout: post
 title: "趋势面试总结"
 date:  2022-03-01 10:11:53 +0800
-categories: Job
+categories: Interview
 ---
 
 今天登上趋势官网一看，果然，笔试被刷了。
