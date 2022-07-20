@@ -12,7 +12,7 @@ categories: Go
 
 首先从[官网](https://go.dev/dl/)上下载二进制压缩文件：
 ```
-$ wget https://go.dev/dl/go1.18.4.linux-amd64.tar.gz  # 将 1.18.4 换成最新的 golang 版本
+$ wget https://go.dev/dl/go1.17.7.linux-amd64.tar.gz  # 将 1.17.7 换成最新的 golang 版本
 ```
 
 然后利用`tar`来解压文件到目录`/usr/local`：
