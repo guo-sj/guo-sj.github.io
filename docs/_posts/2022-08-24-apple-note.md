@@ -25,4 +25,6 @@ categories: Apple
 4. MacBook Pro 的键盘是要比 MacBook Air 的键盘要好的。就拿 m2 版的 Air 来说，Pro 的键盘按下去段落感
 更加明显，也更加跟手一些。实事上，Pro 几乎所有的配置都是要比 Air 的好
 
+5. Macbook 的屏幕需要用**眼镜布轻轻擦拭**，用纸巾，或毛巾等物品只会越擦越脏
+
 以上。
