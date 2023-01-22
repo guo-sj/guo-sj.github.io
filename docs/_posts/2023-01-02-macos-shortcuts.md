@@ -12,5 +12,7 @@ categories: MacOS
 |\<Command\> + \<Ctrl\> + f| 应用全屏 |
 |\<Ctrl\> + \<Left\> / \<Right\>| 切换桌面 |
 |\<Command\> + \<Ctrl\> + q| 锁屏 |
+|\<Shift\> + \<Command\> + i| Anki Import |
+|\<Command\> + e| Anki Export |
 
 以上。
