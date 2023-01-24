@@ -3,6 +3,7 @@ layout: post
 title: "NP Complete Problem"
 date:  2023-01-23 10:11:53 +0800
 mathjax: true
+comments: true
 categories: Algorithm
 ---
 
