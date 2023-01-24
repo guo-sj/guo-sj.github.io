@@ -17,5 +17,6 @@ categories: Markdown
 其他：
 - 用 `$` 来 wrap 多个英文单词的时候，中间的空格需要用 `\` escape 掉。
 - 在 Jekyll 上使能 mathjax，看[这篇文章](https://sgeos.github.io/github/jekyll/2016/08/21/adding_mathjax_to_a_jekyll_github_pages_blog.html#disqus_thread)
+- 更多的数学记号用法可以参考[这篇博客](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html#:~:text=Math%20inside%20RMarkdown,10n%3D1n2.)
 
 以上。
