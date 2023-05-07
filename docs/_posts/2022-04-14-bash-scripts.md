@@ -2,7 +2,7 @@
 layout: post
 title: "Discrete Skills of Bash Script"
 date:  2022-04-14 10:11:53 +0800
-categories: Bash-Script
+categories: Shell
 ---
 
 工作和生活中不可避免的会用到Bash Script，但是又没有足够的时间系统的学习，

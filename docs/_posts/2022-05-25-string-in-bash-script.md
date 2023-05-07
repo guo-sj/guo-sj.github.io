@@ -2,7 +2,7 @@
 layout: post
 title: "String in Bash Script"
 date:  2022-05-25 10:11:53 +0800
-categories: Bash-Script
+categories: Shell
 ---
 
 如果我们想要把两个 string 变量 str1 和 str2 合成一个 str3，那么可以这样做：
