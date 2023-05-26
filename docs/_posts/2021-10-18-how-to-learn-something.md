@@ -9,7 +9,7 @@ For myself, the process of learning something is:
 ```
     while (1)
         read classic books
-        do some related practice
+        do some related practice deliberately
     end while
 ```
 

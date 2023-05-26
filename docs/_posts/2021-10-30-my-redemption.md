@@ -53,7 +53,7 @@ NeXT电脑公司被苹果公司收购，身为NeXT掌门人的乔布斯因此重
 ```
     while (1)
         read classic books
-        do some related practice
+        do some related practice deliberately
     end while
 ```
 
@@ -67,5 +67,3 @@ NeXT电脑公司被苹果公司收购，身为NeXT掌门人的乔布斯因此重
 
 **[1]** 这句话来自于电视剧《天道》，原话为：劫富富不去，救贫贫不离。救主的文化唯救主可说。救主不是人，是道。得救不是破了戒
 的狼吞虎咽，是觉悟。
-
-
