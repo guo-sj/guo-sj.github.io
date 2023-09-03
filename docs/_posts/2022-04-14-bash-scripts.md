@@ -105,4 +105,10 @@ do
 done
 ```
 
+7. 在 shell 中判断一个字符串长度的方法，在字符串前面加 `#` 号：
+```sh
+str="guosj"
+echo The length of $str: ${#str}
+```
+
 以上。
