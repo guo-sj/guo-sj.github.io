@@ -44,7 +44,7 @@ git pull origin <your-current-branch>
 来更新你当前仓库中的文件。
 
 ## 删除一个 submodule
-删除一个 submodule 比较麻烦，要分为 4 步：
+删除一个 submodule 比较麻烦，要分为 3 步：
 - 使用命令 `git rm path/to/submodule` 去删除对应的 submodule 同时修改 `.gitmodules` 文件
 - 删除 `.git/config` 文件中相关的行
 - commit & push
