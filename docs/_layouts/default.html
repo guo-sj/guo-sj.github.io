@@ -14,9 +14,26 @@
       </div>
     </main>
 
-    {% include disqus.html %}
+    <!-- {% include disqus.html %} -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+    <div id="gitalk-container"></div>
+
+    <script type="text/javascript">
+        var gitalk = new Gitalk({
+            clientID: 'f733c5594a8e8e51444b',
+            clientSecret: '4db935a5e617a893da89da466f4a4123e60cd77e',
+            repo: 'guo-sj.github.io',
+            owner: 'guo-sj',
+            admin: ['guo-sj'],
+            id: location.pathname, // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
     {%- include footer.html -%}
-    <script id="dsq-count-scr" src="//https-guo-sj-github-io.disqus.com/count.js" async></script>
+    <!-- <script id="dsq-count-scr" src="//https-guo-sj-github-io.disqus.com/count.js" async></script> -->
 
   </body>
 
