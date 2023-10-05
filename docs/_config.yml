@@ -38,7 +38,6 @@ theme: minima
 header_pages:
     - categories.html
     - about.md
-    - read-books.md
     - todo.md
     - write-rules.md
 
