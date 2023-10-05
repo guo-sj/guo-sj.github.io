@@ -45,9 +45,6 @@ header_pages:
 minima:
     skin: dark
 
-disqus:
-    shortname: https-guo-sj-github-io
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
