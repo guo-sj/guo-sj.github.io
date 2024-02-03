@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "title name"
-date:  2023-06-10 10:11:53 +0800
+date:  2024-02-03 10:11:53 +0800
 mathjax: true
 categories: C
 ---
