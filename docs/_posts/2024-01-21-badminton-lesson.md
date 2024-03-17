@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2023/12/24 羽毛球课程学习"
+title: "2024/01/21 羽毛球课程学习"
 date:  2024-01-21 10:11:53 +0800
 mathjax: true
 categories: Badminton
