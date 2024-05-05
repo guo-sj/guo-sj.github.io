@@ -18,24 +18,24 @@ categories: Tech
 client <---> target
 ```
 
-而装了shadowsocks之后，我们上网则是客户端发出的请求先发送给shadowsocks client，即sslocal程序，
+而装了shadowsocks之后，我们上网则是客户端发出的请求先发送给shadowsocks client，即ss-local程序，
 再由它发送给shadowsocks server，即ssserver程序，最后再发送给target。接收信息的过程是发送信息的逆过程。
 具体如下图所示：
 ```
-client <---> sslocal <---> [encrypted] <---> ssserver <---> target
+client <---> ss-local <---> [encrypted] <---> ssserver <---> target
                 ^                               ^
     shadowsocks client                  shadowsocks server
 ```
 
 至于为什么这样就可以科学上网，举个例子你就明白了。比如说你想访问google，装shadowsocks之前，
 你是直接发送http请求给google，因为GFW的限制，你的请求在到达google之前，就被拦截下来了。而
-装上shadowsocks之后情况就不一样了。你的请求首先会由sslocal发送给ssserver，因为ssserver是
+装上shadowsocks之后情况就不一样了。你的请求首先会由ss-local发送给ssserver，因为ssserver是
 部署在国外的机器上，所以访问网站就不会受到GFW的限制，所以请求会被ssserver成功发送给google，
-而google收到请求后，会回复ssserver，然后ssserver再转发给sslocal，最后你就可以收到回复了。
+而google收到请求后，会回复ssserver，然后ssserver再转发给ss-local，最后你就可以收到回复了。
 
 在原理清楚了之后，我们开始动手安装相应的软件。首先我们来安装shadowsocks：
 ```
-$ sudo apt-get install shadowsocks-libev
+sudo apt-get install shadowsocks-libev
 ```
 
 然后我们来编辑shadowsocks的配置文件：
@@ -46,10 +46,10 @@ $ sudo apt-get install shadowsocks-libev
     "server":"server_ip",  // 安装ssserver机器的IP或域名
     "mode":"tcp_and_udp",  // 连接模式，这里选择的是tcp和udp
     "server_port":xxx,     // 安装ssserver机器的端口
-    "local_port":xxx,      // sslocal监听的端口号，默认为1080
-    "password":"xxx",      // sslocal和ssserver通信的密码
+    "local_port":xxx,      // ss-local监听的端口号，默认为1080
+    "password":"xxx",      // ss-local和ssserver通信的密码
     "timeout":100,         // 超时设置
-    "method":"aes-256-gcm" // sslocal和ssserver的通信加密方式
+    "method":"aes-256-gcm" // ss-local和ssserver的通信加密方式
 }
 ```
 
@@ -60,9 +60,9 @@ sudo apt-get install libsodium-dev
 ```
 
 对照着[Just My Socks 客户界面](https://justmysocks2.net/members/clientarea.php?action=productdetails&id=473570)
-填写完配置文件后，就可以运行`sslocal`啦：
+填写完配置文件后，就可以运行`ss-local`啦：
 ```
-$ sslocal -c /etc/shadowsocks-libev/config.json
+ss-local -c /etc/shadowsocks-libev/config.json
 INFO: loading config from /etc/shadowsocks-libev/config.json
 2022-03-13 10:29:23 INFO     loading libcrypto from libcrypto.so.1.1
 2022-03-13 10:29:23 INFO     loading libsodium from libsodium.so.23
@@ -70,7 +70,7 @@ INFO: loading config from /etc/shadowsocks-libev/config.json
 ... ...
 ```
 
-这样还不可以科学上网，因为我们只是setup了sslocal，并没有让上网请求走这个代理。
+这样还不可以科学上网，因为我们只是setup了ss-local，并没有让上网请求走这个代理。
 所以，接下来，我们介绍两种走代理的方式，一种是全局代理（global proxy），另
 一种则是PAC（Proxy Auto-Config）。
 
@@ -82,14 +82,14 @@ INFO: loading config from /etc/shadowsocks-libev/config.json
 
 原理图如下：
 ```
-client <---> privoxy <---> sslocal <---> [encrypted] <---> ssserver <---> target
+client <---> privoxy <---> ss-local <---> [encrypted] <---> ssserver <---> target
                               ^                               ^
                 shadowsocks client                  shadowsocks server
 ```
 
 安装privoxy的命令如下：
 ```
-$ sudo apt-get install privoxy
+sudo apt-get install privoxy
 ```
 
 然后我们打开privoxy的配置文件，在章节4.1. listen-address和5.1. forward加入下面的内容：
@@ -112,18 +112,18 @@ forward-socks5t / 127.0.0.1:1080 .
 
 修改完成之后，重启privoxy。
 ```
-$ systemctl restart privoxy
+systemctl restart privoxy
 ```
 
 如果你只需要在命令行中访问国外的资源，那么只需要执行下列命令即可：
 ```
-$ export http_proxy=http://127.0.0.1:8118
-$ export https_proxy=http://127.0.0.1:8118
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=http://127.0.0.1:8118
 ```
 
 可以get Google页面来判断是否设置成功：
 ```
-$ curl www.google.com
+curl www.google.com
 ```
 
 如果你也想浏览器使用代理，那么可以配置系统网络代理，步骤是：
@@ -156,28 +156,28 @@ client <---> browser <---> local PAC file
                 |              |
                 |              |
                 v              v
-                sslocal <---> ssserver
+                ss-local <---> ssserver
 ```
 
 在了解了原理之后，我们首先要制作这个PAC file。制作的过程需要两样东西，
 一个是生成PAC file的工具，另一个则是被墙网站的列表。
 首先我们来安装生成的工具GenPAC：
 ```
-$ sudo pip install genpac
-$ sudo pip install --upgrade genpac
+sudo pip install genpac
+sudo pip install --upgrade genpac
 ```
 
 被墙网站的列表已经有人帮我们收集好了，存放在[gfwlist/gfwlist](https://github.com/gfwlist/gfwlist)，
 我们把它clone下来就好了：
 ```
-$ git clone https://github.com/gfwlist/gfwlist
+git clone https://github.com/gfwlist/gfwlist
 ```
 
 接着我们来生成自己的PAC file：
 ```
-$ cd gfwlist
+cd gfwlist
 
-$ sudo genpac --pac-proxy="SOCKS5 127.0.0.1:1080" -o ~/.autoproxy.pac --gfwlist-local gfwlist.txt
+sudo genpac --pac-proxy="SOCKS5 127.0.0.1:1080" -o ~/.autoproxy.pac --gfwlist-local gfwlist.txt
 ```
 
 然后，我们对系统网络进行设置：
@@ -199,7 +199,7 @@ client <---> browser <---> nginx server <---> local PAC file
                 |              |
                 |              |
                 v              v
-                sslocal <---> ssserver
+                ss-local <---> ssserver
 
 ```
 
@@ -240,5 +240,31 @@ sudo nginx
 访问google进行测试：
 
 ![PAC mode google test](/assets/pac_mode_google_test.png)
+
+### 定位手段
+如果发现网络不通了，可以按照下列手段先定位下。
+
+#### 看下各服务的状态是否正常
+```sh
+sudo systemctl status shadowsocks.service # 查看 shadowsocks 的服务状态
+sudo systemctl status privoxy.service # 查看 privoxy 的服务状态
+```
+
+#### 是否是域名暂时被禁了
+
+用如下命令编辑下 config.json 文件：
+```sh
+sudo vim /etc/shadowsocks-libev/config.json
+```
+
+然后再重启服务：
+```sh
+sudo systemctl restart shadowsocks.service
+sudo systemctl restart privoxy.service
+```
+
+#### 其他问题
+
+尝试重启电脑解决 :)
 
 以上。
