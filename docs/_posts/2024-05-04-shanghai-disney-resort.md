@@ -20,13 +20,12 @@ categories: Tour
 知乐坊餐厅
 米奇童话妙妙屋演出
 小飞侠之天空奇遇
-晶彩启航
+晶彩启航 * 2
 童话漫游时光
 花车游行《米奇童话专列》
 公主演出，金色庆典
 创世纪速光轮
 巴斯光年
-晶彩启航
 奇幻光影秀
 世界商店shopping
 ```
@@ -37,13 +36,11 @@ categories: Tour
 
 就是一个小型的过山车，比较刺激，女朋友因为没有坐过，全程尖叫~
 
-![](/assets/mine-vehicle.png)
-
 ### 疯狂动物城
 
 据说是世界上唯一一个《疯狂动物城》主题的园区，把电影中的动物城直接搬到了现实中，看起来还是蛮震撼的：
 
-![动物城全貌](/assets/Zootopia_1.png)
+![动物城全貌](/assets/Zootopia_1.jpeg)
 
 里面的项目是“热力追踪”，游客扮演一名动物城里的警官，和朱迪（兔子）、尼克（狐狸）一起去追捕逃犯。这里很有意思的一点是，
 它是采用身体和视觉效果结合的方式，让游客产生身临其境的体验。我记得其中有一个场景，我们坐着车追赶逃犯坏绵羊，面前的
@@ -75,7 +72,7 @@ categories: Tour
 和女朋友一起打卡了美国著名的芝乐坊餐厅，坊间传闻是“美国东北菜”，主打一个量大管饱。我们点了 2 道菜，夏威夷盛宴沙拉和大虾意面，
 味道还不错，性价比在迪士尼的餐厅中也算可以。
 
-![芝乐坊](/assets/chesscake_factory.png)
+![芝乐坊](/assets/chesscake_factory.jpeg)
 
 ### 米奇童话妙妙屋演出
 女朋友帮忙预约的演出，提早排队占到了前排的位置，全部是真唱真跳，现场效果不错。
@@ -89,29 +86,25 @@ categories: Tour
 ### 童话漫游时光
 这个项目是边上城堡边游玩。讲的是白雪公主的故事。全程看下来的感受是，嗯，王子的嘴可以解毒。
 
-![迪士尼的城堡](/assets/castle.png)
+![迪士尼的城堡1](/assets/castle_1.jpeg)
+
+![迪士尼的城堡2](/assets/castle_2.jpeg)
 
 ### 花车游行《米奇童话专列》
 
 就是米奇带着一群童话人物来给大家打招呼，还有一些跳舞表演，非常热闹。
 
-![花车游行1](/assets/parade_1.png)
+![花车游行1](/assets/parade_1.jpeg)
 
-![花车游行2](/assets/parade_2.png)
+![花车游行2](/assets/parade_2.jpeg)
 
 ### 公主演出《金色庆典》
 
 就是公主们轮番在城堡前的台子上表演。
 
-![公主演出1](/assets/princess_show_1.png)
-
-![公主演出2](/assets/princess_show_2.png)
-
 ### 创世纪速光轮
 这个项目还是比较刺激的，它是那种骑着的过山车，瞬间可以加速到 90 公里每小时，这让原本就不擅长
 坐过山车的女朋友心态崩溃，我安慰了她好一阵子呢。
-
-![创世纪速光轮](/assets/tron.png)
 
 ### 巴斯光年
 
@@ -121,19 +114,15 @@ categories: Tour
 
 这个绝对是最厉害的节目。它是用两台高清投影设备把迪士尼的各种人物做混剪，配合着烟花，效果真是美轮美焕。
 
-![奇幻光影秀1](/assets/fireworks_show_1.png)
+![奇幻光影秀1](/assets/fireworks_show_1.jpeg)
 
-![奇幻光影秀2](/assets/fireworks_show_2.png)
+![奇幻光影秀2](/assets/fireworks_show_2.jpeg)
 
-![奇幻光影秀3](/assets/fireworks_show_3.png)
+![奇幻光影秀3](/assets/fireworks_show_3.jpeg)
 
 ### 世界商店 shopping
 
 最后的最后，我们去世界商店 shopping。女朋友买了一个星黛露玩偶，我买了一个 lego F1 赛车。
-
-![星黛露玩偶](/assets/StellaLou.png)
-
-![F1](/assets/lego_f1.png)
 
 ### 总结
 
