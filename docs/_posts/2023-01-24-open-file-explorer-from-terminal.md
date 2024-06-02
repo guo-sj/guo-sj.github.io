@@ -6,7 +6,7 @@ mathjax: true
 categories: MacOS
 ---
 
-在 Mac 中，在命令行中打开文件管理器，我们可以这样做：
+在 Mac/Linux 中，在命令行中打开文件管理器，我们可以这样做：
 ```
 $ open .
 ```
