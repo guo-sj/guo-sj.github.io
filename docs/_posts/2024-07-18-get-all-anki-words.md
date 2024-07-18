@@ -3,7 +3,7 @@ layout: post
 title: "使用lex和makefile得到所有的anki单词（自己的第一个词法分析器）"
 date:  2024-07-18 10:11:53 +0800
 mathjax: true
-categories: Lex && Yacc
+categories: Lex-And-Yacc
 ---
 
 哇，好久没有写技术博客了。感觉自己已经离 hacker 的梦想越来越远了呢～
