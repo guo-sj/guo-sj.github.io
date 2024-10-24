@@ -2,7 +2,7 @@
 layout: post
 title: "大便之道"
 date:  2023-09-20 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Body
 ---
 

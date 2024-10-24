@@ -2,7 +2,7 @@
 layout: post
 title: "如何使用 awesomeTTS 给 anki 卡片生成语音"
 date:  2024-07-20 11:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Anki
 ---
 

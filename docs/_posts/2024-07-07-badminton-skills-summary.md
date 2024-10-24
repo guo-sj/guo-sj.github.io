@@ -2,7 +2,7 @@
 layout: post
 title: "2024/07/07 羽毛球技术总结"
 date:  2024-07-07 12:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Badminton
 ---
 

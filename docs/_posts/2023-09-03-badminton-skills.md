@@ -2,7 +2,7 @@
 layout: post
 title: "羽毛球技巧"
 date:  2023-09-03 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Badminton
 ---
 

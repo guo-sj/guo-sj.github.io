@@ -2,7 +2,7 @@
 layout: post
 title: "在 ubuntu 上安装微信"
 date:  2024-04-03 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Linux
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "2023/10/21 ～ 10/22 安徽歙县二日游"
 date:  2023-11-05 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Tour
 ---
 

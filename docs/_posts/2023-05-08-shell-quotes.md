@@ -2,7 +2,7 @@
 layout: post
 title: "Shell Quotes"
 date:  2023-05-08 01:01:53 +0800
-mathjax: true
+mathjax: false
 categories: Shell
 ---
 

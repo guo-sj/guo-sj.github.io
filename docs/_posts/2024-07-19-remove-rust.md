@@ -2,7 +2,7 @@
 layout: post
 title: "如何去除铁銹"
 date:  2024-07-19 19:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Life-Experience
 ---
 

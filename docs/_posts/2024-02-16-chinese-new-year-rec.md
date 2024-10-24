@@ -2,7 +2,7 @@
 layout: post
 title: "2024 春节假期记录"
 date:  2024-02-16 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Tour
 ---
 

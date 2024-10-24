@@ -2,7 +2,7 @@
 layout: post
 title: "为什么不建议去外包公司"
 date:  2024-02-03 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Thought
 ---
 

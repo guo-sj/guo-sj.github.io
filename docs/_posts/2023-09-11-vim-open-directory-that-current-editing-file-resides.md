@@ -2,7 +2,7 @@
 layout: post
 title: "在 vim 中打开当前所编辑的文件所在的目录"
 date:  2023-09-10 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Vim
 ---
 

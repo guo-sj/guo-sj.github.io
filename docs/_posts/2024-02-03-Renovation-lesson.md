@@ -2,7 +2,7 @@
 layout: post
 title: "装修的教训"
 date:  2024-02-03 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Renovation
 ---
 

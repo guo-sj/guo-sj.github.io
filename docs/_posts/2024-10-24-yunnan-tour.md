@@ -2,7 +2,7 @@
 layout: post
 title: "2024 十一假期来云南的所见所闻所感"
 date:  2024-10-24 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Tour
 ---
 

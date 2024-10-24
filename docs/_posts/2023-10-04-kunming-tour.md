@@ -2,7 +2,7 @@
 layout: post
 title: "2023 十一假期来昆明的所见所闻所感"
 date:  2023-10-04 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Tour
 ---
 

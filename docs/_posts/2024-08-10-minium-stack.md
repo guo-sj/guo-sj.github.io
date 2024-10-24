@@ -2,7 +2,7 @@
 layout: post
 title: "包含 min 函数的栈"
 date:  2024-08-10 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Leetcode
 ---
 

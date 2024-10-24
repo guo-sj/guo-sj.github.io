@@ -2,7 +2,7 @@
 layout: post
 title: "2024/03/31 羽毛球课程学习"
 date:  2024-03-31 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Badminton
 ---
 

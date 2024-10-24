@@ -2,7 +2,7 @@
 layout: post
 title: "Ubuntu Touchpad"
 date:  2024-04-05 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Linux
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Git submodules"
 date:  2023-09-24 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Git
 ---
 

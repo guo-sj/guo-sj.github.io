@@ -2,7 +2,7 @@
 layout: post
 title: "我的转华为历程"
 date:  2024-10-22 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Interview
 ---
 

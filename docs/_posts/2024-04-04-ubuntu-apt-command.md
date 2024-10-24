@@ -2,7 +2,7 @@
 layout: post
 title: "Ubuntu apt command"
 date:  2024-04-04 12:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Linux
 ---
 

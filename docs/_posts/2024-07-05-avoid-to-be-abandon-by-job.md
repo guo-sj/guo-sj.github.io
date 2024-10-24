@@ -2,7 +2,7 @@
 layout: post
 title: "如何避免被行业淘汰"
 date:  2024-07-03 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: Thought
 ---
 

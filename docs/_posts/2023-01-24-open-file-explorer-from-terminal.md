@@ -2,7 +2,7 @@
 layout: post
 title: "Open File Explorer from Terminal"
 date:  2023-01-24 10:11:53 +0800
-mathjax: true
+mathjax: false
 categories: MacOS
 ---
 
