@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Install Shadowsocks in Ubuntu"
+title: "Install Shadowsocks/V2ray in Ubuntu"
 date:  2022-03-13 10:11:53 +0800
 categories: Tech
 ---
@@ -266,5 +266,43 @@ sudo systemctl restart privoxy.service
 #### 其他问题
 
 尝试重启电脑解决 :)
+
+### 安装 V2ray
+
+shadowsocks 的网速比较慢，渐渐地我产生了换成 [v2ray](https://github.com/v2fly/v2ray-core) 的想法。在 Ubuntu 系统上安装也
+比较简单，直接用官方的脚本加上手册就可以完成：
+```sh
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+```
+
+然后修改配置文件 `/usr/local/etc/v2ray/config.json`，把 `address`，`port`，`id` 三项填写好：
+```json
+...
+
+    "outbounds": [
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "server", // 服务器地址，请修改为你自己的服务器 ip 或域名
+                        "port": 10086, // 服务器端口
+                        "users": [
+                            {
+                                "id": "b831381d-6324-4d53-ad4f-8cda48b30811" // UUID
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+......
+```
+
+启动并设置开机自启动：
+```sh
+sudo systemctl start v2ray
+sudo systemctl enable v2ray
+```
 
 以上。
