@@ -19,6 +19,6 @@ categories: Leetcode
 就是左子树的元素，它后面的元素就是右子树的元素。接下来，我们可以分别对左、右子树
 用这个策略**递归**完成整个二叉树的建造。
 
-这是我在 Leetcode 的[提交记录](https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/submissions/)。
+这是我在 Leetcode 的[提交记录](https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/submissions/337970611/)。
 
 以上。
