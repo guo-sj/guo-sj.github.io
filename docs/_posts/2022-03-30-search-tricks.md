@@ -3,6 +3,7 @@ layout: post
 title: "Search Tricks"
 date:  2022-03-30 09:11:53 +0800
 categories: Search-skills
+mermaid: true
 ---
 
 ### 搜索后缀加 `edu`
@@ -24,3 +25,17 @@ google> java tutorial pdf
 相较于网页或者博客，书是对一个事物系统性的解释，如果一个事物对自己未来的发展有帮助，尽量是通过书去学习～
 以上。
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+<div class="mermaid">
+graph LR
+    A --- B
+    B-->C[Happy]
+    B-->D(Sad);
+</div>
