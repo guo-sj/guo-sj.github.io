@@ -25,7 +25,9 @@ categories: Front-end
 
 第二步，在 `_layouts/default.html` 中增加如下代码，用于在页面渲染时包含 `mermaid.html` 的内容：
 ```html
+{% raw %}
   {% include mermaid.html %}
+{% endraw %}
 ```
 
 第三步，在需要文章的开头增加 `mermaid: true` 或 `mermaid: false` 去打开或关闭加载 `mermaid.js` 库，并用 `<div class="mermaid">` 和 `</div>` 把需要渲染的 `mermaid` 语句括起来。如：
