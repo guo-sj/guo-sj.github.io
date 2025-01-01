@@ -7,6 +7,8 @@ mermaid: true
 categories: Front-end
 ---
 
+## 如何在 Github Page 上使用 Mermaid 画图
+
 > 如何在 Github Page 上使用 Mermaid 画图？
 
 这个问题困扰了我好久。最近对象在准备机试，周末也不出去玩了，就在家刷题。借这个机会，我把这个问题解决了～
@@ -47,3 +49,7 @@ graph LR
     B-->C[Happy]
     B-->D(Sad);
 </div>
+
+## 在 Github Page 上使用 Mermaid 的注意事项
+
+1. 不能使用 `<<abstract>>` 标记
