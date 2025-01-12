@@ -7,7 +7,8 @@ mermaid: true
 categories: Design-Pattern
 ---
 
-先加 UML 图，文字介绍之后再补充～
+> 装饰模式（Decorator Pattern）：动态地给一个对象增加一些额外的职责，就增加对象的功能来说，
+装饰模式比生成子类实现更加灵活。
 
 <div class="mermaid">
 classDiagram
