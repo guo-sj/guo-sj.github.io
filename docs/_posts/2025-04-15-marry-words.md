@@ -7,6 +7,8 @@ mermaid: false
 categories: Marry
 ---
 
+![两人对念誓词](/assets/marry-words_1.jpeg)
+
 ### 馒头的誓词
 亲爱的沄宝：
 
@@ -82,5 +84,5 @@ categories: Marry
 我希望大家今天都能吃的开心，玩的开心。很幸运和大家度过今天，度过这个意义非凡的夜晚。我衷心地希望大家都能收获自己的
 幸福，身体健康，事事顺心。
 
-待补充：
-- 婚礼照片
+
+![六人全家福](/assets/marry-words_2.jpeg)
