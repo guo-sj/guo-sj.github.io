@@ -115,6 +115,6 @@ categories: Marry
 
 希望大家今天都能吃的开心，玩的开心，很幸运和大家度过今天，度过这个意义非凡的一天，我衷心地希望大家都能收获自己的幸福，身体健康，事事顺心。
 
-![在运城和家人的合照](/assets/marry-words_3.jpeg)
+![在运城和家人的合照](/assets/marry-words_3.png)
 
-![在运城和朋友的合照](/assets/marry-words_4.jpeg)
+![在运城和朋友的合照](/assets/marry-words_4.png)
