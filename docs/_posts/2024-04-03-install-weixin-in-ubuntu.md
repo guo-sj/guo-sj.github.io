@@ -6,6 +6,18 @@ mathjax: false
 categories: Linux
 ---
 
+**============================2025-05-10更新============================**
+
+微信官方增加了对 Linux 的支持，可以直接去[网站](https://linux.weixin.qq.com/en)上下载，然后使用 `dpkg` 进行安装：
+```
+dpkg -i WeChatLinux_x86_64.deb
+```
+
+官方体验还是要比之前的好很多的～
+
+**============================2025-05-10更新============================**
+
+
 最近重新用回了 ubuntu~，这里记录一下安装微信的过程。
 
 在[ubuntukylin](https://archive.ubuntukylin.com/software/pool/partner/)中，有 `weixin_2.1.4_amd64.deb`。
