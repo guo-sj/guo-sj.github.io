@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "基础的理财知识"
-date:  2025-05-04 10:11:53 +0800
+date:  2025-05-21 10:11:53 +0800
 mathjax: false
 mermaid: false
 categories: Investing
