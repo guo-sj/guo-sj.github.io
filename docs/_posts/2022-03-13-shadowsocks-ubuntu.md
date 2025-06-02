@@ -12,6 +12,8 @@ categories: Tech
 并买了[Just My Socks](https://justmysocks2.net/members/clientarea.php)，用于科学上网，这里
 记录一下整个搭建的过程。
 
+### Ubuntu 安装 shadowsocks
+
 首先讲下shadowsocks的原理，装shadowsocks之前，我们的上网过程是客户端直接和服务器端
 交流，如下图所示：
 ```
@@ -74,7 +76,7 @@ INFO: loading config from /etc/shadowsocks-libev/config.json
 所以，接下来，我们介绍两种走代理的方式，一种是全局代理（global proxy），另
 一种则是PAC（Proxy Auto-Config）。
 
-### 全局代理
+#### 全局代理
 
 我们先来说全局代理。首先我们需要安装`privoxy`，它能够实现不同代理之间的切换，
 我们可以使用它作为SOCKS代理和HTTP代理和HTTPS代理之间的桥梁，它能把所有的http
@@ -138,7 +140,7 @@ curl www.google.com
 
 这样就设置好了。
 
-### PAC
+#### PAC
 
 PAC是 Proxy Auto-Config 的首字母缩写，是一种网页浏览器技术，用于定义
 浏览器该如何自动选择适当的代理服务器来访问一个网址。
@@ -241,16 +243,16 @@ sudo nginx
 
 ![PAC mode google test](/assets/pac_mode_google_test.png)
 
-### 定位手段
+#### 定位手段
 如果发现网络不通了，可以按照下列手段先定位下。
 
-#### 看下各服务的状态是否正常
+##### 看下各服务的状态是否正常
 ```sh
 sudo systemctl status shadowsocks.service # 查看 shadowsocks 的服务状态
 sudo systemctl status privoxy.service # 查看 privoxy 的服务状态
 ```
 
-#### 是否是域名暂时被禁了
+##### 是否是域名暂时被禁了
 
 用如下命令编辑下 config.json 文件：
 ```sh
@@ -263,14 +265,15 @@ sudo systemctl restart shadowsocks.service
 sudo systemctl restart privoxy.service
 ```
 
-#### 其他问题
+##### 其他问题
 
 尝试重启电脑解决 :)
 
 ### 安装 V2ray
 
+#### Ubuntu
 shadowsocks 的网速比较慢，渐渐地我产生了换成 [v2ray](https://github.com/v2fly/v2ray-core) 的想法。在 Ubuntu 系统上安装也
-比较简单，直接用官方的脚本加上手册就可以完成：
+比较简单，直接用官方的脚本加上[手册](https://www.v2ray.com/chapter_00/start.html)就可以完成：
 ```sh
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 ```
@@ -304,5 +307,161 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 sudo systemctl start v2ray
 sudo systemctl enable v2ray
 ```
+
+#### MacOS
+我于 2025/05/28 买了一台 MacMini（24 + 512），安装 V2ray 也耗了一些时间，这里记录下。
+
+先下载最新的 [V2ray](https://github.com/v2fly/v2ray-core/releases/)：
+```sh
+curl -LO https://github.com/v2fly/v2ray-core/releases/download/v5.33.0/v2ray-macos-arm64-v8a.zip
+unzip v2ray-macos-arm64-v8a.zip
+```
+
+接着填写好 `config.json` 文件，和 Ubuntu 上面一样，然后在命令行中启动：
+```sh
+./v2ray run -c config.json
+V2Ray 5.33.0 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.24.3 darwin/arm64)
+A unified platform for anti-censorship.
+2025/06/01 15:42:49 [Warning] V2Ray 5.33.0 started
+2025/06/01 15:42:51 [Warning] [1552976251] app/dispatcher: default route for tcp:alive.github.com:443
+
+ALL_PROXY=socks://127.0.0.1:1080 # 配置命令行代理
+```
+
+如下是我的完整配置文件：
+```json
+{
+    "inbounds": [
+        {
+            "port": 1080, // SOCKS 代理端口，在浏览器中需配置代理并指向这个端口
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+                "udp": true
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vmess",
+            "tag": "proxy",  // 添加这个标签，匹配路由规则
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "xxxx", // 隐藏一下，服务器地址，请修改为你自己的服务器 ip 或域名
+                        "port": xxxx, // 隐藏一下，服务器端口
+                        "users": [
+                            {
+                                "id": "xxxx" // 隐藏一下
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        }
+    ],
+    "routing": { // 配置路由，实现国内不走代理
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "type": "field",
+                "outboundTag": "direct",
+                "domain": [
+                    "geosite:cn"
+                ]
+            },
+            {
+                "type": "field",
+                "outboundTag": "direct",
+                "ip": [
+                    "geoip:cn",
+                    "geoip:private"
+                ]
+            },
+            {
+                "type": "field",
+                "outboundTag": "proxy",
+                "domain": [
+                    "geosite:geolocation-!cn"
+                ]
+            }
+        ]
+    }
+}
+```
+
+接下来，我们配置 v2ray 作为后台进程，每次开机自动运行（emmm……，尽管 mac-mini 通常都是一直运行的，但是还是加上这步比较好）
+
+我们首先按照 apple 要求的格式创建文件 `~/Library/LaunchAgents/com.v2ray.v2ray.plist`：
+```
+# cat ~/Library/LaunchAgents/com.v2ray.v2ray.plist
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.v2ray.v2ray</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/bin/v2ray</string>
+      <string>run</string>
+      <string>-config</string>
+      <string>/usr/local/bin/config.json</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/v2ray.err</string>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/v2ray.out</string>
+  </dict>
+</plist>
+```
+
+然后将 v2ray 放到 `/usr/local/bin` 目录下：
+```sh
+
+ls /usr/local/bin
+
+config.json
+geoip-only-cn-private.dat
+geoip.dat
+geosite.dat
+v2ray
+vpoint_socks_vmess.json
+vpoint_vmess_freedom.json
+```
+
+通过 `launchctl bootstrap/bootout` 去加卸载 v2ray 服务，这里的 `launchctl` 就相当于 Linux 系统中的 `systemctl`，用来管理后台进程和服务的控制工具：
+```sh
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.v2ray.v2ray.plist # 加载 v2ray 服务
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.v2ray.v2ray.plist # 卸载 v2ray 服务
+```
+
+最后查看 v2ray 的执行情况：
+```sh
+ps aux | grep -i v2ray
+
+guosj-mac-mini   32570   0.0  1.1 416289952 268000   ??  S     5:13下午   0:12.64 /usr/local/bin/v2ray run -config /usr/local/bin/config.json  # 这个就是我们启动的服务
+guosj-mac-mini   38291   0.0  0.0 410724096   1472 s002  S+    9:39上午   0:00.00 grep -i v2ray
+guosj-mac-mini   38289   0.0  0.0 410734160   2384 s002  S+    9:39上午   0:00.01 /bin/zsh -c (ps aux | grep -i v2ray)>/var/folders/64/72549wbd2y7bzyyn4nhhlt6r0000gn/T/vdg5H9k/174 2>&1
+```
+
+如果需要图形界面也走代理，那么我们可以直接在系统设置中直接搜索 `proxy -> SOCKS 代理`，输入 config.json 文件中指定的 ip 和 端口即可。
+
+至此，v2ray 的安装和配置已经正式完成了。
 
 以上。
