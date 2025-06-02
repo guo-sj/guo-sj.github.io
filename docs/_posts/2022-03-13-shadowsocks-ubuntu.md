@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Install Shadowsocks/V2ray in Ubuntu"
+title: "Install Shadowsocks/V2ray in Ubuntu/MacOS"
 date:  2022-03-13 10:11:53 +0800
 categories: Tech
 ---
