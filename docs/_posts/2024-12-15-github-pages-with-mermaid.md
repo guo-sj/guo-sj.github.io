@@ -53,3 +53,4 @@ graph LR
 ## 在 Github Page 上使用 Mermaid 的注意事项
 
 1. 不能使用 `<<abstract>>` 标记
+2. 中间不能有空行
