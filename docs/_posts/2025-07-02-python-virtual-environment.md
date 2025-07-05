@@ -76,9 +76,9 @@ deactivate # 退出虚拟环境
 ➜  myPythonPlayground
 ```
 
-另外，因为我在 macOS 上运行 pip，而且还使用了 v2ray 的 socks 代理，所以会遇到这个错误：
+另外，因为我在 macOS 上运行 pip，而且还使用了 v2ray 的 socks 代理，所以还需要做下面 2 个动作：
 ```sh
-python3 -m pip install pysocks  # 让 python 识别 socks 代理
+python3 -m pip install pysocks socksio httpx # 让 python 识别 socks 代理
 export ALL_PROXY=socks5://127.0.0.1:1080 # 指明 socks 代理的版本使得 pip3 可以正常工作
 ```
 
