@@ -272,63 +272,18 @@ sudo systemctl restart privoxy.service
 ### 安装 V2ray
 
 #### Ubuntu
-shadowsocks 的网速比较慢，渐渐地我产生了换成 [v2ray](https://github.com/v2fly/v2ray-core) 的想法。在 Ubuntu 系统上安装也
-比较简单，直接用官方的脚本加上[手册](https://www.v2ray.com/chapter_00/start.html)就可以完成：
-```sh
-bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+shadowsocks 的网速比较慢，渐渐地我产生了换成 [v2ray](https://github.com/v2fly/v2ray-core/releases/) 的想法。
+在 Ubuntu 系统上安装也比较简单：
+```
+curl -LO https://github.com/v2fly/v2ray-core/releases/download/v5.36.0/v2ray-linux-64.zip
+unzip v2ray-linux-64.zip -d v2ray
+sudo cp v2ray/v2ray /usr/local/bin/v2ray # 拷贝二进制文件
+sudo mkdir /usr/local/etc/v2ray
+sudo cp -t /usr/local/etc/v2ray/ config.json  geoip.dat  geoip-only-cn-private.dat  geosite.dat vpoint_socks_vmess.json  vpoint_vmess_freedom.json　# 拷贝配置文件
+sudo cp systemd/system/* /etc/systemd/system/　# 拷贝　system daemon 配置文件
 ```
 
-然后修改配置文件 `/usr/local/etc/v2ray/config.json`，把 `address`，`port`，`id` 三项填写好：
-```json
-...
-
-    "outbounds": [
-        {
-            "protocol": "vmess",
-            "settings": {
-                "vnext": [
-                    {
-                        "address": "server", // 服务器地址，请修改为你自己的服务器 ip 或域名
-                        "port": 10086, // 服务器端口
-                        "users": [
-                            {
-                                "id": "b831381d-6324-4d53-ad4f-8cda48b30811" // UUID
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-......
-```
-
-启动并设置开机自启动：
-```sh
-sudo systemctl start v2ray
-sudo systemctl enable v2ray
-```
-
-#### MacOS
-我于 2025/05/28 买了一台 MacMini（24 + 512），安装 V2ray 也耗了一些时间，这里记录下。
-
-先下载最新的 [V2ray](https://github.com/v2fly/v2ray-core/releases/)：
-```sh
-curl -LO https://github.com/v2fly/v2ray-core/releases/download/v5.33.0/v2ray-macos-arm64-v8a.zip
-unzip v2ray-macos-arm64-v8a.zip
-```
-
-接着填写好 `config.json` 文件，和 Ubuntu 上面一样，然后在命令行中启动：
-```sh
-./v2ray run -c config.json
-V2Ray 5.33.0 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.24.3 darwin/arm64)
-A unified platform for anti-censorship.
-2025/06/01 15:42:49 [Warning] V2Ray 5.33.0 started
-2025/06/01 15:42:51 [Warning] [1552976251] app/dispatcher: default route for tcp:alive.github.com:443
-
-ALL_PROXY=socks://127.0.0.1:1080 # 配置命令行代理
-```
-
-如下是我的完整配置文件：
+修改配置文件 `/usr/local/etc/v2ray/config.json`，完整的配置文件如下：
 ```json
 {
     "inbounds": [
@@ -394,6 +349,40 @@ ALL_PROXY=socks://127.0.0.1:1080 # 配置命令行代理
 }
 ```
 
+启动并设置开机自启动：
+```sh
+sudo systemctl daemon-reload # 重新识别 /etc/systemd/system 目录下新增的文件
+sudo systemctl start v2ray # 启动 v2ray 服务
+sudo systemctl enable v2ray　# 设置开机自启动 v2ray 服务
+```
+
+#### MacOS
+我于 2025/05/28 买了一台 MacMini（24 + 512），安装 V2ray 也耗了一些时间，这里记录下。
+
+先下载最新的 [V2ray](https://github.com/v2fly/v2ray-core/releases/)：
+```sh
+curl -LO https://github.com/v2fly/v2ray-core/releases/download/v5.33.0/v2ray-macos-arm64-v8a.zip
+unzip v2ray-macos-arm64-v8a.zip
+```
+
+接着填写好 `config.json` 文件，和 Ubuntu 上面的一样，然后在命令行中启动：
+```sh
+./v2ray run -c config.json
+V2Ray 5.33.0 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.24.3 darwin/arm64)
+A unified platform for anti-censorship.
+2025/06/01 15:42:49 [Warning] V2Ray 5.33.0 started
+2025/06/01 15:42:51 [Warning] [1552976251] app/dispatcher: default route for tcp:alive.github.com:443
+
+ALL_PROXY=socks5://127.0.0.1:1080 # 配置命令行代理
+```
+
+安装步骤和上面 Linux 一致：
+```sh
+sudo cp v2ray/v2ray /usr/local/bin/v2ray # 拷贝二进制文件
+sudo mkdir /usr/local/etc/v2ray
+sudo cp -t /usr/local/etc/v2ray/ config.json  geoip.dat  geoip-only-cn-private.dat  geosite.dat vpoint_socks_vmess.json  vpoint_vmess_freedom.json　# 拷贝配置文件
+```
+
 接下来，我们配置 v2ray 作为后台进程，每次开机自动运行（emmm……，尽管 mac-mini 通常都是一直运行的，但是还是加上这步比较好）
 
 我们首先按照 apple 要求的格式创建文件 `~/Library/LaunchAgents/com.v2ray.v2ray.plist`：
@@ -413,7 +402,7 @@ ALL_PROXY=socks://127.0.0.1:1080 # 配置命令行代理
       <string>/usr/local/bin/v2ray</string>
       <string>run</string>
       <string>-config</string>
-      <string>/usr/local/bin/config.json</string>
+      <string>/usr/local/etc/v2ray/config.json</string>
     </array>
 
     <key>RunAtLoad</key>
@@ -431,20 +420,6 @@ ALL_PROXY=socks://127.0.0.1:1080 # 配置命令行代理
 </plist>
 ```
 
-然后将 v2ray 放到 `/usr/local/bin` 目录下：
-```sh
-
-ls /usr/local/bin
-
-config.json
-geoip-only-cn-private.dat
-geoip.dat
-geosite.dat
-v2ray
-vpoint_socks_vmess.json
-vpoint_vmess_freedom.json
-```
-
 通过 `launchctl bootstrap/bootout` 去加卸载 v2ray 服务，这里的 `launchctl` 就相当于 Linux 系统中的 `systemctl`，用来管理后台进程和服务的控制工具：
 ```sh
 launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.v2ray.v2ray.plist # 加载 v2ray 服务
@@ -455,7 +430,7 @@ launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.v2ray.v2ray.plist # �
 ```sh
 ps aux | grep -i v2ray
 
-guosj-mac-mini   32570   0.0  1.1 416289952 268000   ??  S     5:13下午   0:12.64 /usr/local/bin/v2ray run -config /usr/local/bin/config.json  # 这个就是我们启动的服务
+guosj-mac-mini   32570   0.0  1.1 416289952 268000   ??  S     5:13下午   0:12.64 /usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json  # 这个就是我们启动的服务
 guosj-mac-mini   38291   0.0  0.0 410724096   1472 s002  S+    9:39上午   0:00.00 grep -i v2ray
 guosj-mac-mini   38289   0.0  0.0 410734160   2384 s002  S+    9:39上午   0:00.01 /bin/zsh -c (ps aux | grep -i v2ray)>/var/folders/64/72549wbd2y7bzyyn4nhhlt6r0000gn/T/vdg5H9k/174 2>&1
 ```
