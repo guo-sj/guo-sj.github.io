@@ -99,3 +99,16 @@ expr -> NUMBER | expr + expr
 
 Parse（解析）就是从 `context-free grammar` 的 start symbol 得到一条编程语言的语句的过程。Parse Tree（解析树）展现
 了这个过程。
+
+## bison 的使用
+在 MacOS 或者 GNU/Linux 中，已经不建议使用 yacc 去处理 `.y` 文件了，而是建议使用 `bison`，用法如下：
+```sh
+bison hoc.y # 生成 hoc.tab.c
+cc -o hoc hoc.tab.c
+```
+
+如果你还有其他文件需要用到中间生成的 `hoc.tab.h` 文件，那么可以加上 `-d` flag。
+```sh
+bison -d hoc.y # 生成 hoc.tab.h hoc.tab.c
+cc -o hoc hoc.tab.c other.c # other.c 中 include 了 hoc.tab.h 文件
+```
