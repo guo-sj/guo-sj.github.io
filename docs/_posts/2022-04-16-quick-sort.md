@@ -64,7 +64,41 @@ func quickSort(list []int) {
     quickSort(list[:i])
     quickSort(list[i+1:])
 }
-
 ```
 
+**=============== 2025/08/24 更新 ===============**
+
+看了《The Practice of Programming》中的 quick sort 后，才意识到自己之前理解的 quick sort 的
+实现是不优雅的。主要是关于如何把小于 pivot 的元素移到它的左边，把大于它的元素移到它的右边。
+我们一起看下书中的方法：
+```
+1. 对于数组 list，选取任意一个元素做为 pivot
+2. 把 pivot 和 list[0] 互换
+3. 定义 pivot 正确位置的下标为 last，初始化为 0
+4. 遍历 list，如果 list[i] 小于 list[0]，last 自增一位，则将 list[i] 和 list[last] 互换
+5. 将 list[0] 和 list[last] 互换
+```
+
+这个算法的关键就在于，如果我把小于 pivot 的元素都放到它前面，那么自然大于它的元素就在它的
+后面了。我们用 C 语言实现一下：
+```c
+void quickSort(int a[], int num)
+{
+    if (num < 2) {
+        return;
+    }
+    swap(a, 0, rand() % num);
+    int last = 0;
+    for (int i = 0; i < num; i++) {
+        if (a[i] < a[0]) {
+            swap(a, i, ++last);
+        }
+    }
+    printf("%d\n", a[last]);
+    swap(a, 0, last);
+    quickSort(a, last);
+    quickSort(a + last + 1, num - last - 1);
+    return;
+}
+```
 以上。
