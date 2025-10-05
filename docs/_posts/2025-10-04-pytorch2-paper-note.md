@@ -387,6 +387,12 @@ ONNX（Open Neural Network Exchange）是一个去展现 ML 模型的格式标�
 
 ![](/assets/netron_example.png)
 
+这段时出现了一个词 `PyTorch operators`，我想再说明下。在 PyTorch 中，一个 operator 就是一个对于一个或多个 tensor 进行特定操作的函数。
+比如 `torch.add` 和 `torch.sum`。这个和我们上面说的 operator 也可以对应上，即 operator 是一个比 kernel 更高层的函数，一个模型有多
+个 operator，一个 operator 含有多个 kernel 函数。
+
+在 PyTorch 中，`Aten(stands for A Tensor)` 是一个 C++ 库，定义了 Tensor 类和最基础的[算子函数](https://docs.pytorch.org/docs/main/torch.compiler_ir.html)，其他的算子操作都基于这个库进行搭建的。
+
 > The ONNX team is working on an integration with Torch-
 > Dynamo that will replace TorchScript with a direct Torch-
 > Dynamo integration. Once finished, this will increase the
