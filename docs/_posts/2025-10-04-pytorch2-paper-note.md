@@ -400,3 +400,94 @@ ONNX（Open Neural Network Exchange）是一个去展现 ML 模型的格式标�
 
 一开始，ONNX 导出功能在 PyTorch 中是用的 `torch.jit.trace` 和 `torch.jit.script`，这 2 位大哥有很多缺点，是吧，上面已经列了。后续 ONNX 会
 和 `TorchDynamo` 整合在一起。
+
+#### 2.6 Comparison To Graph Capture In JAX
+
+> JAX [8] largely doesn’t face the same challenges being solved
+> by TorchDynamo. The initial design of JAX was heavily
+> coupled to the design of XLA [45], and JAX has been backed
+> by XLA from its inception. This has the effect of forcing
+> JAX programs to conform to the constraints built into the
+> design coming up the stack from XLA. Thus, JAX uses a
+> simpler capture mechanism, and expects users to write their
+> programs to meet the constraints of that capture mechanism.
+> As an example, jax.jit does not support data-dependent
+> Python control flow and requires user code to be functionally
+> pure.
+
+> In contrast, PyTorch started as an eager-only framework
+> without any compiler-minded constraints built into its de-
+> sign. A large corpus of models has grown on top of PyTorch,
+> most of which were written without any regard to how hard
+> to capture and compile they would be.
+
+> On an implementation level, the capture mechanism in
+> JAX is similar to torch.fx.symbolic_trace (Section 2.4), but
+> somewhat simpler, because JAX programs are purely func-
+> tional and thus do not need to worry about state. The Torch
+> FX paper [34] contains a more detailed comparison with
+> JAX.
+
+JAX 也是一个 Python 库，和 XLA 有很强的关联性，抓取机制类似于 `torch.fx.symbolic_trace`。
+
+### 3 TorchDynamo Design and Implementation
+
+> TorchDynamo takes a fundamentally different approach
+> from prior graph capture systems in PyTorch. Rather than
+> trying to remove or replace Python, TorchDynamo tries to
+> work with CPython by just-in-time (JIT) compiling Python
+> bytecode. TorchDynamo is a Python bytecode to Python
+> bytecode translator, where it extracts PyTorch operations
+> from the original bytecode and replaces them with calls to
+> compiled artifacts that fuse many PyTorch operations to-
+> gether. Figure 1 provides an overview of how TorchDynamo
+> operates and will be explained in the remainder of this sec-
+> tion.
+
+终于到论文的重头戏了。
+
+`TorchDynamo` 与 CPython 一起工作，通过 JIT 编译 Python bytecode。什么是 CPython？
+
+CPython 就是当前最广泛采用的 Python 实现形式，叫这个名字的原因是它是使用 C 语言去实现的 Python 语言。如果我们从官网安装 Python，那么
+我们默认安装的就是 CPython。
+
+CPython 执行时，先把 Python 代码翻译成一种与平台无关的 bytecode（IR），然后再使用 PVM（Python Virtual Machine）去执行 bytecode。
+从这个角度来说，Python 的执行方式和 Java 有点像。
+
+`TorchDynamo` 是一个 Python bytecode 到 bytecode 的翻译器，通过把 PyTorch 操作从原始的 bytecode 抽取出来，把它替换一下，然后再转换回去。
+
+**artifact**: an object that has been made by a person, such as a tool or decoration, especially one that is of historical interests  人工制品
+
+**fuse**: to join together physically, or to join things together physically  融合，结合
+
+#### 3.1 Usage API
+
+> The primary API introduced in this paper is torch.compile.
+> It can be used either by calling it on a PyTorch Module or as
+> a function decorator. It has the following keyword options:
+>
+> • backend: allows the user to provide a custom compile
+> function which takes a torch.fx.Graph and a list of
+> example inputs and returns a Python callable. This
+> defaults to TorchInductor, but can also be set to one
+> of many builtin backends or a user-defined backend.
+>
+> • options: An optional dictionary of backend-specific
+> configuration flags.
+>
+> • mode: Shorthand strings for a predefined set of op-
+> tions: "default", "reduce-overhead", or "max-autotune".
+>
+> When you run a module with torch.compile, the module
+> is executed with the modified CPython behavior shown in
+> Figure 1. Specifically, a custom CPython frame evaluation
+> hook will rewrite the bytecode of of each Python function
+> being executed in order to extract and compile sequences
+> of PyTorch operations. This bytecode rewriting process is
+> cached, but the analysis relies on certain dynamic properties
+> of the program that we use guards to check on subsequent
+> calls.
+
+`TorchDynamo` 的基础接口是 `torch.compile`，有 3 个关键参数：
+- `backend`：默认是 `TorchInductor`，当然我们可以指定其他的编译后端，比如我们华为的 `torch_npu` :-)
+- `mode`：
