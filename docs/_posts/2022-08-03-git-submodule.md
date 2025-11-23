@@ -6,7 +6,7 @@ categories: Git
 ---
 
 Git 提供了一个命令，git submodule，它可以让一个 git 仓库嵌入到另一个 git 仓库中。
-比如，我们想把仓库 b (https://github.com/guo-sj/b.git) 嵌入到仓库 a 中，我们可以
+比如，我们想把仓库 [b](https://github.com/guo-sj/b.git) 嵌入到仓库 a 中，我们可以
 这样做：
 ```
 $ cd a/
@@ -35,12 +35,17 @@ $ git submodule update --init
 $ git clone --recurse-submodules https://github.com/guo-sj/a
 ```
 
-最后，当你想 fetch submodules 的 upstream 的时候，你可以这样做：
+当你想 fetch submodules 的 upstream 的时候，你可以这样做：
 ```
 $ git submodule update --remote [submodule-name]
 ```
 
 命令中的 submodule-name 可以被替换为某个特定的 submodule 的 local path。就像我们上面讲的那样，你可以在仓库的 .gitmodules 文件中
 找到所有 submodules 的 local path。如果你缺省了 submodule-name，那么这条命令会更新当前仓库包含的所有 submodules。
+
+删除一个 submodule 比较麻烦，要分为 3 步：
+- 使用命令 `git rm path/to/submodule` 去删除对应的 submodule 同时修改 `.gitmodules` 文件
+- 删除 `.git/config` 文件中相关的行
+- commit & push
 
 以上。
