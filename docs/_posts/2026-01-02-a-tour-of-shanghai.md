@@ -31,7 +31,7 @@ categories: Tour
 
 ![](/assets/2026-01-02-ShangHaiTour/brad-pitt.png)
 
-![](/assets/2026-01-02-ShangHaiTour/jackie-chess.png)
+![](/assets/2026-01-02-ShangHaiTour/jackie-chan.png)
 
 相比之下，观光巴士的体验就略显逊色。不同于上次来上海乘坐巴士的流畅行程，这次每站都要停留不短的时间，节奏拖沓影响观感，也终于明白为何这种观光巴士要搭配联票售卖。
 
@@ -43,9 +43,9 @@ categories: Tour
 
 ![](/assets/2026-01-02-ShangHaiTour/the-bund-1.png)
 
-![](/assets/2026-01-02-ShangHaiTour/the-bund-2.png)
+![](/assets/2026-01-02-ShangHaiTour/the-bund-2.jpg)
 
-![](/assets/2026-01-02-ShangHaiTour/the-bund-3.png)
+![](/assets/2026-01-02-ShangHaiTour/the-bund-3.jpg)
 
 我们入住的汉庭人民广场地铁站店，完美诠释了“寸土寸金” —— 13 平米的房间要价 600 元，是我住过最小也最贵的汉庭。但无可否认，地理位置绝佳，紧邻人民广场地铁站，去往市区各景点都十分便捷，也算为出行效率牺牲了部分舒适度。
 
