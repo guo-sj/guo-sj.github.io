@@ -3,7 +3,7 @@ layout: post
 title: "如何保持顺畅的排便"
 date:  2023-09-20 10:11:53 +0800
 mathjax: false
-categories: Body
+categories: Health
 ---
 
 很少有人清楚，对于一个做过两次腹部手术的人，大便是一个多么痛苦的过程。
