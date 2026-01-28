@@ -3,7 +3,7 @@ layout: post
 title: "Mathmatical Notation in Markdown"
 date:  2023-01-23 01:11:53 +0800
 mathjax: true
-categories: Markdown
+categories: Math
 ---
 
 | typing | render result |
