@@ -16,29 +16,29 @@ error: externally-managed-environment
 ╰─> To install Python packages system-wide, try brew install
     xyz, where xyz is the package you are trying to
     install.
-    
+
     If you wish to install a Python library that isn't in Homebrew,
     use a virtual environment:
-    
+
     python3 -m venv path/to/venv
     source path/to/venv/bin/activate
     python3 -m pip install xyz
-    
+
     If you wish to install a Python application that isn't in Homebrew,
     it may be easiest to use 'pipx install xyz', which will manage a
     virtual environment for you. You can install pipx with
-    
+
     brew install pipx
-    
+
     You may restore the old behavior of pip by passing
     the '--break-system-packages' flag to pip, or by adding
     'break-system-packages = true' to your pip.conf file. The latter
     will permanently disable this error.
-    
+
     If you disable this error, we STRONGLY recommend that you additionally
     pass the '--user' flag to pip, or set 'user = true' in your pip.conf
     file. Failure to do this can result in a broken Homebrew installation.
-    
+
     Read more about this behavior here: <https://peps.python.org/pep-0668/>
 
 note: If you believe this is a mistake, please contact your Python installation or OS distribution provid
@@ -82,3 +82,4 @@ python3 -m pip install pysocks socksio httpx # 让 python 识别 socks 代理
 export ALL_PROXY=socks5://127.0.0.1:1080 # 指明 socks 代理的版本使得 pip3 可以正常工作
 ```
 
+如果是一个人的环境的话，直接使用 `conda` 可以避免这种来回 `activate/deactivate` 的问题。
