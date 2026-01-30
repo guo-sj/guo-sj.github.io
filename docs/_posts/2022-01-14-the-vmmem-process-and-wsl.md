@@ -41,4 +41,25 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 保存文件并退出。这样下次开启WSL2的时候，`vmmem`进程对系统内存
 的占用就会被限定到2GB，对处理器的占用也会被限制到2个核心。
 
+对于 Thinkpadx1 ultra7 + 32G + 1T，使用 wsl 配置如下，避免卡死或者闪退：
+```
+[wsl2]
+# 核心：32G内存分配16GB给WSL2，留16GB给Windows（兼顾性能和系统流畅）
+memory=16GB
+# 分配10核CPU（Ultra 7 155H共14核，留4核给Windows，足够进程调度）
+processors=10
+# 交换空间（虚拟内存）：8GB，解决内存峰值OOM问题（装包/跑代码必备）
+swap=8GB
+# 交换文件路径，默认C盘（你的C盘1T，空间充足，无需修改）
+swapfile=C:\\Users\\guosj\\wsl2-swap.vhdx
+# 关闭显存限制（运行TileLang/PyTorch/GPU相关MHC代码必开，释放显卡显存）
+gpu_memory=0
+# 自动回收WSL2虚拟硬盘空间（避免镜像文件无限膨胀，1T硬盘也建议开启）
+autoReclaimStorage=true
+# 禁用WSL2休眠（避免进程挂起/死锁）
+hibernate=false
+# 启用嵌套虚拟化（可选，若后续需要在WSL2中运行其他虚拟机）
+nestedVirtualization=true
+```
+
 以上。
