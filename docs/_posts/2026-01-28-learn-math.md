@@ -36,8 +36,10 @@ Prompt:
 | $\sigma$ | 西格玛 | $\sigma$ | 标准差、方差、分布离散程度 | 正态分布标准差、数据归一化的标准差参数 |
 | $\Sigma$ | 大写西格玛 | $\sum$ | 累加求和算子 | 损失函数样本累加、注意力加权求和、批量损失求和 |
 | $\Pi$ | 大写派 | $\prod$ | 累乘算子 | 概率模型的似然估计、联合概率计算 |
-| $\nabla$ | 纳布拉 | $\nabla$ | 梯度算子 | $\nabla_\theta \mathcal{L}$ 损失对参数求梯度，对应`loss.backward()` |
+| $\nabla$ | 纳布拉 | `$\nabla$` | 梯度算子 | $\nabla_\theta \mathcal{L}$ 损失对参数求梯度，对应`loss.backward()` |
 | $\partial$ | 偏德尔塔 | $\partial$ | 偏导数符号 | $\frac{\partial \mathcal{L}}{\partial w_i}$ 损失对单个参数的偏导 |
+| $\leftarrow$ | 左箭头 | `$\leftarrow$` |  | $B_0 \leftarrow 0$ 把 $B_0$ 赋值成 $0$ |
+| $\in$ | 属于 | `$\in$` |  | $A \in [0, 1]$，A 属于 [0, 1] 范围内 |
 
 ## 二、AI论文专用数学符号&花体符号速查
 | 符号格式 | 符号名称 | 核心含义 | 工程对应 |
