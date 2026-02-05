@@ -7,7 +7,7 @@ mermaid: false
 categories: Engineering
 ---
 
-
+## 基础思路
 > prompt: 我们公司目前在搞 AI 提效，现在我即将负责一个点，就是“AI辅助代码检视”。我们的代码都是放在开源平台 gitcode。我给你讲下我们的开发流程。我们公司分 3 个区，分别是B区，Y区和 G区，信息流通的方式是：B区 -> G区 -> Y区。只能单向流动，而不能反过来。正常的开发流程是在 B 区 fork 开源仓代码到自己的仓，记为 private-repo，然后 clone 下来开发。开发好后，提交到 private-repo。然后去 G 区/Y区，在设备上 clone 下来自己的 private-repo，进行验证。如果需要修改，则还需要在 B 区修改，然后 push 到 private-repo，再到 G区/Y区 clone 下来验证。直到验证Ok。然后从 private-repo 提 PR 到公共的仓库，接受大家检视，最后合入。你帮我看看，这种开发流程中，我在哪些点可以使用到 “AI 辅助代码检视”来提升效率呢？
 
 这边和豆包交流了一下，我理解基于我们当前的情况，应该是在 2 个点去部署 AI 检视：
@@ -73,6 +73,8 @@ categories: Engineering
 - [Claude Code 的 skills](https://code.claude.com/docs/en/skills)
 	- [agentskills](https://github.com/agentskills/agentskills)
 - [Claude Code 的原理](https://code.claude.com/docs/en/how-claude-code-works)
+
+## 一个用 ClaudeCode 去检视代码的例子
 
 下面用一个例子去展示 ClaudeCode 工具在仓库 [guo-sj/omni_infer](https://gitee.com/jackie-mantou/omniinfer) 这样一个 python 代码仓库对 python 代码的 review 情况。
 
@@ -728,3 +730,26 @@ index 2636da92..2a128fe4 100644
              indices = indices[-num_new_token:]
          expect_token_num = indices.size
 ```
+
+## AI 检视代码的原理
+
+很多人都有一个疑问，那就是说，AI 不懂特定的领域知识，为什么它一上来就可以 Review 的这么好？
+
+经过和豆包讨论，我理解可以这样回答这个问题：
+
+第一点，AI 模型在训练过程中，已经学习过世界上优秀的代码的最佳实践，以及常见问题的定位思路，相当于它已经拥有了全球程序员的代码经验，主要有这 3 类的通用能力：
+- 语言规范与语法
+- 代码逻辑与模式
+- 最佳实践
+
+第二点，对于业务代码来说，它有明确的语法规则，依赖关系，执行流程和结构。AI 即使不懂业务，它也可以通过这几个代码的通用维度去进行 review。
+
+第三点，用户可以通过 memory/skills/prompt 这 3 种方式给 AI 提供领域特定的上下文信息，比如在 `/init` 得到全局上下文 `CLAUDE.md`，通过 skills 去提供在特定场景下的做事的指导手册；再辅以 prompt 去提供精准的即时上下文。
+
+了解了原理后，那我们可以得出影响 Review 效果的因素：
+
+第一点，模型本身的能力越好，模型的代码理解、逻辑推理能力越强，Review的精准度和深度越好
+
+第二点，业务代码质量越好，高内聚，低耦合，SOLID 原则等等，（符合高内聚低耦合、SOLID原则等），命名越清晰（拼写正确、动宾结构/语义化命名等），AI越易识别逻辑和架构问题，Review效果越好；
+
+第三点，上下文供给质量：用户提供的memory/skills/prompt质量越高（指令越清晰、规则越结构化、上下文越贴合项目），AI的定制化检视效果越精准。
