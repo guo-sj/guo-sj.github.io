@@ -237,7 +237,7 @@ pretrain 的输入是：
 
 即我们定义：
 $$
-X_{t} = \sum^{p}_{i=1} \varphi_{i} X_{t-i} + \epsilon_{t}
+X_{t} = \sum^{p}\_{i=1} \varphi_{i} X_{t-i} + \epsilon_{t}
 $$
 
 - $X_{t}$ 为 $t$ 时序的序列值
