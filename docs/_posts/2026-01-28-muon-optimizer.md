@@ -35,7 +35,7 @@ Require: Learning rate $\eta$, momentum $\mu$
 
 2: for $t$ = 1, ... do
 
-3:     Compute gradient $G_{t} \leftarrow \nabla_{\theta}\mathcal{L}_{t}(\theta_{t-1})$
+3:     Compute gradient $G_{t} \leftarrow \nabla_{\theta}\mathcal{L}\_{t}(\theta_{t-1})$
 
 4:     $B_{t} \leftarrow \mu B_{t-1} + G_{t}$
 
@@ -185,7 +185,7 @@ classDiagram
 
 > 动量 $B_{t}$ 是动量缓冲区，而 $\mu$ 是动量系数，动量缓冲区是通过公式计算出来的，是之前梯度的累积动量项。
 
-2、公式 $\nabla_{\theta} \mathcal{L}_{t}(\theta_{t-1})$ 中，$\nabla_{\theta} \mathcal{L}_{t}$ 是一个函数，就是算第 t 步梯度的函数吗？因为 $\nabla$ 也是梯度的意思，而 $\mathcal{L}$ 是 Loss 函数的意思，Loss 函数是用来计算梯度的，所以我不明白，为什么在 $\mathcal{L}$ 的前面还要加个 $\nabla$ 呢？
+2、公式 $\nabla_{\theta} \mathcal{L}\_{t}(\theta_{t-1})$ 中，$\nabla_{\theta} \mathcal{L}\_{t}$ 是一个函数，就是算第 t 步梯度的函数吗？因为 $\nabla$ 也是梯度的意思，而 $\mathcal{L}$ 是 Loss 函数的意思，Loss 函数是用来计算梯度的，所以我不明白，为什么在 $\mathcal{L}$ 的前面还要加个 $\nabla$ 呢？
 
 3、谱范数对应的英文是什么？它的含义是什么？
 
