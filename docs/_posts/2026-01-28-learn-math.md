@@ -34,8 +34,8 @@ Prompt:
 | $\lambda$ | 兰姆达 | $\lambda$ | 正则化系数、权重衰减系数、拉格朗日乘子 | L1/L2正则 `weight_decay`、约束优化的惩罚系数 |
 | $\mu$ | 缪 | $\mu$ | 均值、期望、分布中心 | 正态分布均值、BatchNorm的均值、数据分布期望 |
 | $\sigma$ | 西格玛 | $\sigma$ | 标准差、方差、分布离散程度 | 正态分布标准差、数据归一化的标准差参数 |
-| $\Sigma$ | 大写西格玛 | $\sum$ | 累加求和算子 | 损失函数样本累加、注意力加权求和、批量损失求和 |
-| $\Pi$ | 大写派 | $\prod$ | 累乘算子 | 概率模型的似然估计、联合概率计算 |
+| $\sum$ | 累加算子 | $\sum$ | 累加求和算子 | 损失函数样本累加、注意力加权求和、批量损失求和 |
+| $\prod$ | 累乘算子 | $\prod$ | 累乘算子 | 概率模型的似然估计、联合概率计算 |
 | $\nabla$ | 纳布拉 | `$\nabla$` | 梯度算子 | $\nabla_\theta \mathcal{L}$ 损失对参数求梯度，对应`loss.backward()` |
 | $\partial$ | 偏德尔塔 | $\partial$ | 偏导数符号 | $\frac{\partial \mathcal{L}}{\partial w_i}$ 损失对单个参数的偏导 |
 | $\leftarrow$ | 左箭头 | `$\leftarrow$` |  | $B_0 \leftarrow 0$ 把 $B_0$ 赋值成 $0$ |
