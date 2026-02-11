@@ -24,20 +24,20 @@ Prompt:
 ## 一、高频希腊字母核心速查表
 | 希腊字母符号 | 标准读音 | 论文常用指代 | 核心数学/工程含义 | 对应PyTorch代码场景 |
 | :--- | :--- | :--- | :--- | :--- |
-| $\alpha$ | 阿尔法 | $\alpha$ | 学习率、初始化系数、随机采样系数 | 优化器学习率 `lr`、随机种子相关系数、初始化超参 |
-| $\beta$ | 贝塔 | $\beta$ | 优化器动量系数、二阶矩估计系数 | Adam优化器 `betas=(beta1, beta2)`、动量SGD的动量项 |
-| $\gamma$ | 伽马 | $\gamma$ | 缩放系数、激活函数缩放参数、权重系数 | LayerNorm/BatchNorm的缩放参数、LeakyReLU斜率 |
-| $\delta$ / $\Delta$ | 德尔塔 | $\Delta$ | 增量、差值、梯度更新步长 | 参数更新的变化量、损失函数差值、梯度裁剪阈值 |
-| $\epsilon$ | 艾普西隆 | $\epsilon$ | 极小常量、数值平滑项、噪声扰动 | 防止除0的 `eps=1e-8`、LabelSmoothing、高斯噪声 |
-| $\theta$ | 西塔 | $\theta$ | 模型全部可训练参数集合 | 模型所有权重`weight`、偏置`bias`的统称，$\theta=\{w_1,w_2,...,w_n\}$ |
-| $\eta$ | 伊塔 | $\eta$ | 学习率（与$\alpha$通用） | 部分论文替代$\alpha$表示优化器学习率`lr` |
-| $\lambda$ | 兰姆达 | $\lambda$ | 正则化系数、权重衰减系数、拉格朗日乘子 | L1/L2正则 `weight_decay`、约束优化的惩罚系数 |
-| $\mu$ | 缪 | $\mu$ | 均值、期望、分布中心 | 正态分布均值、BatchNorm的均值、数据分布期望 |
-| $\sigma$ | 西格玛 | $\sigma$ | 标准差、方差、分布离散程度 | 正态分布标准差、数据归一化的标准差参数 |
-| $\sum$ | 累加算子 | $\sum$ | 累加求和算子 | 损失函数样本累加、注意力加权求和、批量损失求和 |
-| $\prod$ | 累乘算子 | $\prod$ | 累乘算子 | 概率模型的似然估计、联合概率计算 |
+| $\alpha$ | 阿尔法 | `$\alpha$` | 学习率、初始化系数、随机采样系数 | 优化器学习率 `lr`、随机种子相关系数、初始化超参 |
+| $\beta$ | 贝塔 | `$\beta$` | 优化器动量系数、二阶矩估计系数 | Adam优化器 `betas=(beta1, beta2)`、动量SGD的动量项 |
+| $\gamma$ | 伽马 | `$\gamma$` | 缩放系数、激活函数缩放参数、权重系数 | LayerNorm/BatchNorm的缩放参数、LeakyReLU斜率 |
+| $\delta$ / $\Delta$ | 德尔塔 | `$\Delta$` | 增量、差值、梯度更新步长 | 参数更新的变化量、损失函数差值、梯度裁剪阈值 |
+| $\epsilon$ | 艾普西隆 | `$\epsilon$` | 极小常量、数值平滑项、噪声扰动 | 防止除0的 `eps=1e-8`、LabelSmoothing、高斯噪声 |
+| $\theta$ | 西塔 | `$\theta$` | 模型全部可训练参数集合 | 模型所有权重`weight`、偏置`bias`的统称，$\theta=\{w_1,w_2,...,w_n\}$ |
+| $\eta$ | 伊塔 | `$\eta$` | 学习率（与$\alpha$通用） | 部分论文替代$\alpha$表示优化器学习率`lr` |
+| $\lambda$ | 兰姆达 | `$\lambda$` | 正则化系数、权重衰减系数、拉格朗日乘子 | L1/L2正则 `weight_decay`、约束优化的惩罚系数 |
+| $\mu$ | 缪 | `$\mu$` | 均值、期望、分布中心 | 正态分布均值、BatchNorm的均值、数据分布期望 |
+| $\sigma$ | 西格玛 | `$\sigma$` | 标准差、方差、分布离散程度 | 正态分布标准差、数据归一化的标准差参数 |
+| $\sum$ | 累加算子 | `$\sum$` | 累加求和算子 | 损失函数样本累加、注意力加权求和、批量损失求和 |
+| $\prod$ | 累乘算子 | `$\prod$` | 累乘算子 | 概率模型的似然估计、联合概率计算 |
 | $\nabla$ | 纳布拉 | `$\nabla$` | 梯度算子 | $\nabla_\theta \mathcal{L}$ 损失对参数求梯度，对应`loss.backward()` |
-| $\partial$ | 偏德尔塔 | $\partial$ | 偏导数符号 | $\frac{\partial \mathcal{L}}{\partial w_i}$ 损失对单个参数的偏导 |
+| $\partial$ | 偏德尔塔 | `$\partial$` | 偏导数符号 | $\frac{\partial \mathcal{L}}{\partial w_i}$ 损失对单个参数的偏导 |
 | $\leftarrow$ | 左箭头 | `$\leftarrow$` |  | $B_0 \leftarrow 0$ 把 $B_0$ 赋值成 $0$ |
 | $\in$ | 属于 | `$\in$` |  | $A \in [0, 1]$，A 属于 [0, 1] 范围内 |
 
