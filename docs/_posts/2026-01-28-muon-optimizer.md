@@ -156,10 +156,10 @@ NS 正交化的本质就是消解低秩矩阵的“方向集中” 问题，让�
 <div class="mermaid">
 flowchart TD
 
-a[MuonWithAuxAdam.step] --> b[muon_update]
-b --> c[zeropower_via_newtonschulz5]
+a[MuonWithAuxAdam.step] --> b[muon\_update]
+b --> c[zeropower\_via\_newtonschulz5]
 
-a --> d[adam_update]
+a --> d[adam\_update]
 
 e[SingleDeviceMuonWithAuxAdam.step] --> b
 e --> d
@@ -172,10 +172,10 @@ g[Muon.step] --> b
 <div class="mermaid">
 classDiagram
 
-`torch.optim.Optimizer` <|-- Muon
-`torch.optim.Optimizer` <|-- MuonWithAuxAdam
-`torch.optim.Optimizer` <|-- SingleDeviceMuonWithAuxAdam
-`torch.optim.Optimizer` <|-- SingleDeviceMuon
+Optimizer <|-- Muon
+Optimizer <|-- MuonWithAuxAdam
+Optimizer <|-- SingleDeviceMuonWithAuxAdam
+Optimizer <|-- SingleDeviceMuon
 </div>
 
 - 最后利用 NS 迭代正交化的结果 $O_{t}$ 去更新参数 $\theta_{t} = \theta_{t-1} - \eta O_{t}$
