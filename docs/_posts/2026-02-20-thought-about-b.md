@@ -7,4 +7,4 @@ mermaid: false
 categories: Thought
 ---
 
-移步到[这里]()查看。
+移步到[这里](https://github.com/guo-sj/my-blog/blob/main/work/huawei-b/huawei-b.md)查看。
