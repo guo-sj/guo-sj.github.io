@@ -275,7 +275,7 @@ RLHF 的第一步，奖励模型（Reward Model）
 
 输入是 SFT 模型的参数权重，人类标注的偏好对比数据集，微调超参数。
 
-RLHF 的第二步：PPO 强化学习
+RLHF 的第二步：PPO (Proximal Policy Optimization) 强化学习
 
 输入：
 - 模型初始状态：SFT 阶段输出的模型参数
@@ -293,6 +293,9 @@ RLHF 的第二步：PPO 强化学习
 让智能体学会选择动作，使得长期累积奖励最大化。
 
 第三个问题，PPO 是什么的缩写，PPO 和 RM 与 RLHF 的关系是什么？
+
+答：PPO stands for Proximal Policy Optimization，它还有一个变种，是 Deepseek 提出来的，叫做 [GRPO(Group Relative Policy Optimization)](https://arxiv.org/pdf/2402.03300)。
+
 第四个问题，强化学习中的 veRL 是什么？
 第五个问题，我们知道，数据工程是把无序，质量不高的数据作为输入，输出是一份质量高的数据，对吗？
 第六个问题，Reinforcement Learning from Verifiable Rewards 是什么？
