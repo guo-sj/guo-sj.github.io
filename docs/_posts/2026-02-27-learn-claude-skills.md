@@ -15,6 +15,7 @@ categories: AI
 - [agent skill](https://agentskills.io/home)
 - [Introducing Agent Skills](https://claude.com/blog/skills)
 - [Extend Claude with skills](https://code.claude.com/docs/en/skills)
+- [The-Complete-Guide-to-Building-skill-for-Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)
 
 最近我准备系统性学习 skill，感觉最近每个人都在讲 skill，这个词快被用烂了。还是要好好学习一下文档，搞清楚它的真面目。
 
@@ -111,11 +112,4 @@ Skills and code execution
 
 ### 如何安装 skill
 
-### 初步方案
-
-我这里想的是说，采用 skill 集中管控的方式：
-- 原则上只有 CMC 成员才可以修改 skill，CMC 成员需要对各自仓库的 review 结果负责
-- 统一放到一个代码仓（需要指定），由我来负责合入
-- 使用命令行直接安装即可，这里我需要了解一下安装的方法
-- claude 遇到的问题咨询各组的 AI 接口人
-
+使用 `npx skills add xxx` 去安装，具体见 [skills.sh](https://skills.sh/)。
