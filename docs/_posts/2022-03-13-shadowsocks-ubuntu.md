@@ -439,4 +439,14 @@ guosj-mac-mini   38289   0.0  0.0 410734160   2384 s002  S+    9:39上午   0:00
 
 至此，v2ray 的安装和配置已经正式完成了。
 
+### 定位手段
+
+2026/07/26 号突然发现上不了外网了，折腾了一会，这里记录一下这个过程。
+
+上不了外网大概率是因为配置文件的域名被封了，需要去[justmysocks 网站](https://justmysocks6.net/members/)拿一个新的域名下来，更新一下配置文件 `/usr/local/etc/v2ray/config.json`，步骤如下：
+
+1. 先把服务停掉：`launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.v2ray.v2ray.plist`
+2. 更新配置文件 `/usr/local/etc/v2ray/config.json` 中的域名
+3. 再把服务起起来：`launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.v2ray.v2ray.plist`
+
 以上。
